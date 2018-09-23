@@ -18,3 +18,168 @@ body
 	background: #26282d
 .main-cont
 	center(1200px,10px)
+
+
+.head-wrap
+	border-bottom 1px solid $border-color
+//.main-cont
+.header
+	f()
+.header__logo
+	width: 25%
+	padding-right: 20px
+	f()
+	align-items:center
+	img
+		width: 80%
+.header-item
+	flex(mid)
+	width: 17%
+	border-left 1px solid $border-color
+	border-right 1px solid $border-color
+	margin-left: -1px
+	padding: 25px 15px
+	a
+		color white
+//.header--location
+.header-item__icon
+	margin-right: 15px
+	.icon
+		size 20px
+		fill $orange
+//.header-item__text
+//.header-item--phone
+//.header-item__text8
+.header-menu
+	f()
+	width: 40%
+	justify-content: space-between
+	padding-left: 3%
+.header-menu__el
+	padding: 45px 3%
+	up()
+	color white
+	text-align: center
+	&:last-child
+		padding-right: 0
+.header-menu__el--active
+	border-bottom 1px solid $orange
+
+.main-head
+	position: relative
+	margin-bottom: 80px
+	.head-wrap
+		position: absolute
+		width: 100%
+		left 0
+		top 0
+		z-index 2
+
+.main-banner__filter
+	position: absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	background: rgba(0, 0, 0, 0.55)
+.main-banner
+	bg-full()
+	padding: 17% 10%
+	flex(mid)
+	fl()
+	max-height 690px
+.main-banner__cont
+	z-index 2
+	position: relative
+	text-align: center
+	margin-top: 5%
+.main-banner__sub-title
+	opacity 0.4
+	color #ffffff
+	font-family "Gotham"
+	@extend .type--sm
+	margin-bottom: 20px
+.main-banner__title
+	@extend .type--xl
+	line-height: 1.6
+	up()
+	max-width 810px
+	margin-bottom: 5%
+	letter-spacing:5px
+
+.main-banner__get
+	@extend .btn--mark
+	@extend .btn--md
+//.get-modal
+
+//.service
+.service__row
+	grid-template-columns repeat(3,1fr);
+	grid-gap 30px
+	display: grid
+	margin-bottom: 30px
+.service__row-el
+	padding: 30px 10px 95px 10px
+	f()
+	justify-content: flex-start
+	align-items: center
+	fl()
+	background: $black
+.service__circle
+	size 240px
+	flex(mid)
+	border 1px solid #404040
+	round()
+	margin-bottom: 40px
+	position: relative
+	&:before
+		content ''
+		position: absolute
+		size 160px
+		border 1px solid #404040
+		round()
+.service__icon
+	flex(mid)
+	.icon
+		size 60px
+		fill $red
+.service__sub-title
+	@extend .type--sm
+	up()
+	margin-bottom: 25px
+	letter-spacing .3em
+	color white
+	opacity: .4
+
+.service__title
+	@extend .type--md
+	letter-spacing .1em
+	up()
+	text-align: center
+	line-height: 1.6
+
+.service-banner
+	bg-full()
+	padding: 20% 10%
+	position: relative
+	margin-bottom: 30px
+.service-banner__content
+	f()
+	fl()
+	align-items: center
+	position: absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	padding: 50px 20px
+.service-banner__sub-title
+	margin-bottom: 25px
+	opacity: .4
+	@extend .type--sm
+	up()
+	letter-spacing 2.4px
+.service-banner__title
+	@extend .type--xl
+	up()
+	letter-spacing: 6px

@@ -1,6 +1,56 @@
 include block_html/_style.pug
 include block_html/_include.pug
 
-+header()
-
+.main-head
+	+header()
+	.main-banner__filter
+	.main-banner(style="background-image:url('img/banner.jpg')")
+		.main-banner__cont
+			.main-banner__sub-title услуги автосервиса
+			.main-banner__title капительный ремонт двигателей
+			.main-banner__get.get-modal онлайн заявка
+.main-cont
+	.service
+		.service__row
+			.service__row-el
+				.service__circle
+					.service__icon
+						+icon("bag","icon")
+				.service__sub-title двигателей
+				.service__title диагностика
+			.service__row-el
+				.service__circle
+					.service__icon
+						+icon("wheel","icon")
+				.service__sub-title услуги автосервиса
+				.service__title ремонта
+			.service__row-el
+				.service__circle
+					.service__icon
+						+icon("tools","icon")
+				.service__sub-title услуги автосервиса
+				.service__title обслуживание
+		.service-banner(style="background-image:url('img/banner-item.jpg')")
+			.service-banner__content
+				.service-banner__sub-title обслуживание
+				.service-banner__title nissan gtr
+		.service__row
+			.service__row-el
+				.service__circle
+					.service__icon
+						+icon("service","icon")
+				.service__sub-title услуги автосервиса
+				.service__title дополнительное оборудование
+			.service__row-el
+				.service__circle
+					.service__icon
+						+icon("propeller","icon")
+				.service__sub-title услуги автосервиса
+				.service__title нестандартные работы
+			.service__row-el
+				.service__circle
+					.service__icon
+						+icon("chip","icon")
+				.service__sub-title услуги автосервиса
+				.service__title чип-тюнинг
 include ./block_html/_script.pug

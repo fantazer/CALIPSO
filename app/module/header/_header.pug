@@ -1,4 +1,21 @@
 mixin header()
 	//block header
-
+	.head-wrap
+		.main-cont
+			.header
+				.header__logo
+					img(src="img/logo.png", alt="")
+				.header-item.header--location
+					.header-item__icon
+						+icon("location","icon")
+					.header-item__text ул. Гагарина, 62а
+				.header-item.header-item--phone
+					.header-item__icon
+						+icon("phone","icon")
+					a(href="tell:8 800 555 3535").header-item__text8 800 555 3535
+				.header-menu
+					a(href="#").header-menu__el.header-menu__el--active услуги
+					a(href="#").header-menu__el отзывы
+					a(href="#").header-menu__el о компании
+					a(href="#").header-menu__el контакты
 	//block header end
