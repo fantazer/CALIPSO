@@ -1,0 +1,127 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-title капительный ремонт двигателей
+
+		//kind-car
+		.main-cont
+			.kind
+				.kind__el(style="background-image:url('img/item-car-1.jpg')")
+					.kind__el-filter
+					.kind__el-content
+						.kind__el-sub-title ремонт двигателей
+						.kind__el-title MERCEDES BENZ
+				.kind__el(style="background-image:url('img/item-car-2.jpg')")
+					.kind__el-filter
+					.kind__el-content
+						.kind__el-sub-title ремонт двигателей
+						.kind__el-title BMW
+				.kind__el(style="background-image:url('img/item-car-3.jpg')")
+					.kind__el-filter
+					.kind__el-content
+						.kind__el-sub-title ремонт двигателей
+						.kind__el-title AUDI
+				.kind__el(style="background-image:url('img/item-car-4.jpg')")
+					.kind__el-filter
+					.kind__el-content
+						.kind__el-sub-title ремонт двигателей
+						.kind__el-title FORD
+				.kind__el(style="background-image:url('img/item-car-5.jpg')")
+					.kind__el-filter
+					.kind__el-content
+						.kind__el-sub-title ремонт двигателей
+						.kind__el-title NISSAN
+				.kind__el(style="background-image:url('img/item-car-6.jpg')")
+					.kind__el-filter
+					.kind__el-content
+						.kind__el-sub-title ремонт двигателей
+						.kind__el-title MITSUBISHI
+
+
+		//request
+		.request
+			.request-bg
+				.request-bg__el(style="background-image:url('img/item-car-7.png')")
+			.main-cont
+				.request-wrap
+					.form
+						.form__title не нашли марку своей машины?
+						.form__sub-title Заполните форму и мы с Вами свяжемся
+						form(action="#")
+							.input-row.input-row--half
+								input(type="text" placeholder="Марка" class="input")
+								input(type="text" placeholder="Год выпуска" class="input")
+							.input-row
+								input(type="text" placeholder="Пробег" class="input")
+							.input-row
+								input(type="text" placeholder="Телефон" class="input")
+							.form-agreement
+								.form-agreement__text
+									.check-el
+										label.style-label.style-label--checkbox
+											input(type="checkbox").sytle-input
+											.sytle-input-element
+												+icon("checked","icon-check")
+											.sytle-input-text Я согласен с условиями обработки персональных данных
+								input(type="submit" value="отправить" class="form-get")
+
+		//content-text
+		.section
+			.main-cont
+				.content-text
+					p Задача организации, в особенности же сложившаяся структура организации играет важную роль в формировании направлений прогрессивного развития. Товарищи! начало повседневной работы по формированию позиции в значительной степени обуславливает создание направлений прогрессивного развития. Не следует, однако забывать, что консультация с широким активом позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям. Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание новых предложений. Равным образом консультация с широким активом играет важную роль в формировании систем массового участия.
+
+					p С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка, а также укрепление и развитие структуры позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Равным образом новая модель организационной деятельности играет важную роль в формировании направлений прогрессивного развития. Равным образом реализация намеченных плановых заданий позволяет оценить значение существенных финансовых и административных условий.
+
+
+
+		//review-slider
+		.section
+			.main-cont
+				.slider-wrap
+					.slider__head
+						.slider__head__title отзывы о нас
+						.slider-control__wrap
+							.slider-control__el.slider-control--left
+								+icon("arrow-left-mark--color","icon")
+							.slider-control__el.slider-control--right
+								+icon("arrow-right-mark--color","icon")
+					.review-slider.slider-item
+						- for (var i=0;i<3;i++)
+						.review-slider__el
+							.review-slider__content
+								.review-slider__info
+									.review-slider__info-date 12/02/2018,
+									.review-slider__info-text bmw x5
+								a(href="#").review-slider__title анастасия
+								.review-slider__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia ...
+								a(href="#").review-slider__get читать
+						.review-slider__el
+							.review-slider__img
+								.review-slider__img-item(style="background-image:url('img/item-1.jpg')")
+							.review-slider__content
+								.review-slider__info
+									.review-slider__info-date 12/02/2018,
+									.review-slider__info-text bmw x5
+								a(href="#").review-slider__title Валерия
+								.review-slider__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...
+						.review-slider__el
+							.review-slider__img
+								.review-slider__img-item(style="background-image:url('img/item-1.jpg')")
+								a(href="https://youtu.be/KOfyeYiO8Rk").fancybox.review-slider__img-filter
+									.review-slider__img-icon
+										+icon("play","icon")
+							.review-slider__content
+								.review-slider__info
+									.review-slider__info-date 12/02/2018,
+									.review-slider__info-text bmw x5
+								a(href="#").review-slider__title анастасия
+								.review-slider__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...
+
+
+
+	+footer()
+include ./block_html/_script.pug

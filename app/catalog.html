@@ -13,7 +13,12 @@
 		<!--SEO-->
 		<title>Document</title>
 		<meta name="description" itemprop="description" content="" />
-		<link rel="stylesheet" href="css/vendor.css">
+		<!--build:css css/vendor.css-->
+		<link rel="stylesheet" href="bower/normalize.css/normalize.css" />
+		<link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
+		<link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
+		<link rel="stylesheet" href="bower/fancybox/dist/jquery.fancybox.css" />
+		<!--endbuild-->
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/style-edit.css" />
 	</head>
@@ -23,45 +28,59 @@
 
 	<body>
 		<div class="page">
-			<div class="main-head">
-				<!--block header-->
-				<div class="head-wrap">
-					<div class="main-cont">
-						<div class="header">
-							<div class="header__logo"><img src="img/logo.png" alt="" /></div>
-							<div class="header-item header--location">
-								<div class="header-item__icon">
-									<svg class="icon">
-										<use xlink:href="#location"></use>
-									</svg>
-								</div>
-								<div class="header-item__text">ул. Гагарина, 62а</div>
+			<!--block header-->
+			<div class="head-wrap">
+				<div class="main-cont">
+					<div class="header">
+						<div class="header__logo"><img src="img/logo.png" alt="" /></div>
+						<div class="header-item header--location">
+							<div class="header-item__icon">
+								<svg class="icon">
+									<use xlink:href="#location"></use>
+								</svg>
 							</div>
-							<div class="header-item header-item--phone">
-								<div class="header-item__icon">
-									<svg class="icon">
-										<use xlink:href="#phone"></use>
-									</svg>
-								</div><a class="header-item__text8" href="tell:8 800 555 3535">800 555 3535</a>
-							</div>
-							<div class="header-menu"><a class="header-menu__el header-menu__el--active" href="#">услуги</a><a class="header-menu__el" href="#">отзывы</a><a class="header-menu__el" href="#">о компании</a><a class="header-menu__el" href="#">контакты</a></div>
+							<div class="header-item__text">ул. Гагарина, 62а</div>
 						</div>
-					</div>
-				</div>
-				<!--block header end-->
-				<!--main-banner-->
-				<div class="main-banner__filter"></div>
-				<div class="main-banner" style="background-image:url('img/banner.jpg')">
-					<div class="main-banner__cont">
-						<div class="main-banner__sub-title">услуги автосервиса</div><a class="main-banner__title" href="#">капительный ремонт двигателей</a>
-						<div class="main-banner__get get-modal">онлайн заявка</div>
+						<div class="header-item header-item--phone">
+							<div class="header-item__icon">
+								<svg class="icon">
+									<use xlink:href="#phone"></use>
+								</svg>
+							</div><a class="header-item__text8" href="tell:8 800 555 3535">800 555 3535</a>
+						</div>
+						<div class="header-menu"><a class="header-menu__el header-menu__el--active" href="#">услуги</a><a class="header-menu__el" href="#">отзывы</a><a class="header-menu__el" href="#">о компании</a><a class="header-menu__el" href="#">контакты</a></div>
 					</div>
 				</div>
 			</div>
+			<!--block header end-->
 			<div class="content">
+				<!--link-list-->
+				<div class="main-cont">
+					<div class="links">
+						<div class="link-list"><a class="link-list__el" href="#">Audi</a><a class="link-list__el" href="#">Chevrolet</a><a class="link-list__el" href="#">BMW</a><a class="link-list__el" href="#">Ford</a><a class="link-list__el" href="#">Audi</a><a class="link-list__el" href="#">Chevrolet</a><a class="link-list__el" href="#">BMW</a><a class="link-list__el" href="#">Ford</a><a class="link-list__el" href="#">Audi</a><a class="link-list__el" href="#">Chevrolet</a><a class="link-list__el" href="#">BMW</a><a class="link-list__el" href="#">Ford</a><a class="link-list__el" href="#">Audi</a><a class="link-list__el" href="#">Chevrolet</a><a class="link-list__el" href="#">BMW</a><a class="link-list__el" href="#">Ford</a><a class="link-list__el" href="#">Audi</a><a class="link-list__el" href="#">Chevrolet</a><a class="link-list__el" href="#">BMW</a><a class="link-list__el" href="#">Ford</a><a class="link-list__el" href="#">Audi</a><a class="link-list__el" href="#">Chevrolet</a><a class="link-list__el" href="#">BMW</a><a class="link-list__el" href="#">Ford</a>
+						</div>
+						<div class="link-list__info">
+							<div class="link-list__text">Не нашли марку своей машины?</div>
+							<div class="link-list__get">Оставить заявку</div>
+						</div>
+					</div>
+				</div>
+				<!--catalog-banner-->
+				<div class="main-cont">
+					<div class="catalog-banner-wrap">
+						<div class="catalog-banner__filter"></div>
+						<div class="catalog-banner" style="background-image:url('img/banner.jpg')">
+							<div class="catalog-banner__cont">
+								<div class="catalog-banner__sub-title">услуги автосервиса</div>
+								<h1 class="catalog-banner__title">капительный ремонт двигателей</h1>
+								<div class="catalog-banner__get get-modal">онлайн заявка</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<!--services-->
 				<div class="main-cont">
-					<div class="section service">
+					<div class="service">
 						<div class="service__row">
 							<div class="service__row-el">
 								<div class="service__circle">
@@ -140,117 +159,22 @@
 						</div>
 					</div>
 				</div>
-				<!--advantages-->
-				<div class="section advant-wrap">
-					<div class="main-cont">
-						<div class="advant">
-							<div class="advant-el">
-								<div class="advant-el__head">
-									<svg class="icon">
-										<use xlink:href="#users"></use>
-									</svg>
-								</div>
-								<div class="advant-el__text">Индивидуальный подход к каждому клиенту и двигателю</div>
-							</div>
-							<div class="advant-el">
-								<div class="advant-el__head">
-									<div class="advant-el__head-text">10 лет</div>
-								</div>
-								<div class="advant-el__text">Опыт работы с разнообразными автомобилями и моторами</div>
-							</div>
-							<div class="advant-el">
-								<div class="advant-el__head">
-									<div class="advant-el__head-text"><span>До</span>1 год</div>
-								</div>
-								<div class="advant-el__text">Гарантия на двигатель после ремонта</div>
-							</div>
-							<div class="advant-el">
-								<div class="advant-el__head">
-									<div class="advant-el__head-text">100%</div>
-								</div>
-								<div class="advant-el__text">Ресурс и динамика нового двигателя возвращается</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--work-slider-->
+				<!--content-text-->
 				<div class="section">
 					<div class="main-cont">
-						<div class="work-wrap slider-wrap">
-							<div class="slider__head">
-								<div class="slider__head__title">как мы работаем</div>
-								<div class="slider-control__wrap">
-									<div class="slider-control__el slider-control--left">
-										<svg class="icon">
-											<use xlink:href="#arrow-left-mark--color"></use>
-										</svg>
-									</div>
-									<div class="slider-control__el slider-control--right">
-										<svg class="icon">
-											<use xlink:href="#arrow-right-mark--color"></use>
-										</svg>
-									</div>
-								</div>
-							</div>
-							<div class="work-slider-wrap">
-								<div class="work-slider-line"></div>
-								<div class="work-slider slider-item">
-									<div class="work-slider__el">
-										<div class="work-slider__numb">01</div>
-										<div class="work-slider__title">заявка</div>
-										<div class="work-slider__text">При обращении в наш сервис по телефону мы, основываясь на вашем рассказе о проблеме, постараемся дать максимально точную информацию о последующих действиях, понять и разъяснить причину проблемы, дать рекомендации по возможности дальнейшей эксплуатации, приблизительно оценить стоимость ремонта исходя из опыта и описанной проблемы</div>
-									</div>
-									<div class="work-slider__el">
-										<div class="work-slider__numb">02</div>
-										<div class="work-slider__title">диагностика</div>
-										<div class="work-slider__text">Мы записываем вас на удобное для вас время для более точной диагностики и выявления неисправности. Только после проведения диагностических работ (замер компрессии, визуальный осмотр, проверка на посторонние звуки, диагностика электронных систем) принимается решение о разборе мотора</div>
-									</div>
-									<div class="work-slider__el">
-										<div class="work-slider__numb">03</div>
-										<div class="work-slider__title">разбор</div>
-										<div class="work-slider__text">Двигатель разбирается, тщательно отмываются и промеряются все детали и сопряжения, после чего мы предлагаем вам наиболее подходящий вариант восстановления</div>
-									</div>
-									<div class="work-slider__el">
-										<div class="work-slider__numb">04</div>
-										<div class="work-slider__title">запчасти</div>
-										<div class="work-slider__text">Вы выбираете подходящий вариант, оплачиваете необходимые запчасти и мы приступаем к работе</div>
-									</div>
-									<div class="work-slider__el">
-										<div class="work-slider__numb">05</div>
-										<div class="work-slider__title">прием работы</div>
-										<div class="work-slider__text">По готовности вы проверяете автомобиль в действии, выполняете тестовую поездку и всевозможный осмотр. Оплачиваете проделанную работу и получаете гарантию от 6 до 12 месяцев</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--why-->
-				<div class="section">
-					<div class="why-wrap">
-						<div class="main-cont">
-							<div class="why-title">
-								<div class="why-title__img"><img src="img/engine.png" alt="" /></div>
-								<div class="why-title__text">почему ремонт двигателя лучше покупки контрактного</div>
-							</div>
-							<div class="why-content">
-								<div class="why-content__el">
-									<div class="why-content__el-icon why-content__el-icon--true">
-										<svg class="icon">
-											<use xlink:href="#true"></use>
-										</svg>
-									</div>
-									<div class="why-content__el-text">Ремонт двигателя с гарантией до 1 года позволяет Вам быть уверенным, что двигатель будет ходить как новый, заведется, не заклинит, не начнет «есть масло», и мастер в течение гарантийного срока и после будет готов в любое время принять Вас в нашем автосервисе</div>
-								</div>
-								<div class="why-content__el">
-									<div class="why-content__el-icon why-content__el-icon--false">
-										<svg class="icon">
-											<use xlink:href="#false"></use>
-										</svg>
-									</div>
-									<div class="why-content__el-text">Покупка контрактного двигателя — это всегда лотерея! Узнать реальный пробег агрегата практически невозможно, да и условия транспортировки и хранения оставляют желать лучшего. Очень часто по истечении гарантийного срока (как правило, всего 2 недели) выясняется, что двигатель начинает расходовать масло, а то и просто клинит!</div>
-								</div>
-							</div>
+						<div class="content-text">
+							<h1>Заголовок</h1>
+							<h2>Заголовок</h2>
+							<h3>Заголовок</h3>
+							<h4>Заголовок</h4>
+							<p>Задача организации, в особенности же сложившаяся структура организации играет важную роль в формировании направлений прогрессивного развития. Товарищи! начало повседневной работы по формированию позиции в значительной степени обуславливает создание направлений прогрессивного развития. Не следует, однако забывать, что консультация с широким активом позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям. Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание новых предложений. Равным образом консультация с широким активом играет важную роль в формировании систем массового участия.</p><a href="#">ссылка</a>
+							<p>С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка, а также укрепление и развитие структуры позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Равным образом новая модель организационной деятельности играет важную роль в формировании направлений прогрессивного развития. Равным образом реализация намеченных плановых заданий позволяет оценить значение существенных финансовых и административных условий.</p>
+							<ul>
+								<li>список</li>
+								<li>список</li>
+								<li>список</li>
+								<li>список</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -396,7 +320,6 @@
 					</div>
 				</div>
 			</div>
-			<!--footer-->
 			<!--block footer-->
 			<div class="footer-wrap" style="background-image:url('img/footer.png')">
 				<div class="main-cont">
@@ -520,7 +443,12 @@
 			</div>
 			<!--block footer end-->
 		</div>
-		<script src="js/combined.js"></script>
+		<!--build:js js/combined.js-->
+		<script src="bower/jquery/dist/jquery.js"></script>
+		<script src="bower/svg4everybody/dist/svg4everybody.js"></script>
+		<script src="bower/slick-carousel/slick/slick.js"></script>
+		<script src="bower/fancybox/dist/jquery.fancybox.js"></script>
+		<!-- endbuild-->
 		<script src="js/script.js"></script>
 		<script src="js/script-edit.js"></script>
 	</body>

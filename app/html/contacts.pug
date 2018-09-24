@@ -1,0 +1,43 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-title контакты
+		//request
+		.contact
+			.main-cont
+				.contact-wrap
+					.contact-content.content-text
+						.contact-row
+							.contact-row__icon
+								+icon("location-aim","icon")
+							.contact-row__content
+								.contact-row__title адрес
+								.contact-row__text г. Новосибирск, ул. Пушкина, 62
+						.contact-row
+							.contact-row__icon
+								+icon("phone-call","icon")
+							.contact-row__content
+								.contact-row__title телефон
+								.contact-row__text 8 800 535 35 35
+						.contact-row
+							.contact-row__icon
+								+icon("mail","icon")
+							.contact-row__content
+								.contact-row__title EMAIL
+								.contact-row__text Manager@gmail.com
+						.contact-row
+							.contact-row__icon
+								+icon("clock","icon")
+							.contact-row__content
+								.contact-row__title РЕЖИМ РАБОТЫ
+								.contact-row__text с 9:00 до 21:00
+			.contact-bg
+				//.contact-bg__el#map
+				.contact-bg__el
+					script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Lms-0Es59W8iXgQWu8tnxWvf8BkzFdi9&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false")
+	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+	+footer()
+include ./block_html/_script.pug

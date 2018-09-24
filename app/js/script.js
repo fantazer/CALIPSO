@@ -1,5 +1,151 @@
-$(document).ready(function(){
+   $(document).ready(function(){
 
+	//slider
+	$('.work-slider').slick({
+		slidesToShow: 4,
+		autoplay: false,
+		speed: 500,
+		vertical:false,
+		arrows:false,
+		infinite:false,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+					centerMode: true,
+					centerPadding: '40px',
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					arrows: false,
+					centerMode: true,
+					centerPadding: '40px',
+					slidesToShow: 1
+				}
+			}
+		]
+	});
+
+	$('.review-slider').slick({
+		slidesToShow: 3,
+		autoplay: false,
+		speed: 500,
+		vertical:false,
+		arrows:false,
+		infinite:false,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+					centerMode: true,
+					centerPadding: '40px',
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					arrows: false,
+					centerMode: true,
+					centerPadding: '40px',
+					slidesToShow: 1
+				}
+			}
+		]
+	});
+
+	$('.slider-control--right').click(function(){
+		$(this).closest(".slider-wrap").find(".slider-item").slick('slickNext');
+	});
+
+	$('.slider-control--left').click(function(){
+		$(this).closest(".slider-wrap").find(".slider-item").slick('slickPrev');
+	});
+
+	//slick item height
+	sickHeight = function() {
+		var stHeight = $(' .review-slider .slick-track').height();
+		$('.review-slider__el').css('height', stHeight + 'px');
+		var stHeightEl = $('.b-wrap').find('.slick-slide').height();
+		console.log(stHeightEl);
+		$('.b-el').css('height', stHeightEl + 'px');
+	};
+
+	sickHeight();
+
+	$('window').resize(function(){
+		sickHeight();
+	});
+	//slider === end
+
+	//video popup
+	$('.fancybox').fancybox({});
+	//video popup === end
+
+	//modals
+	$('.modal-content').click(function(event){
+			event.stopPropagation();
+		});
+		var scrollPos = 0;
+
+		var openModal = function () {
+		if(!$('.modal-layer').hasClass('modal-layer-show')){
+			$('.modal-layer').addClass('modal-layer-show');
+		}
+		 scrollPos = $(window).scrollTop();
+			$('body').css({
+				overflow: 'hidden',
+				position: 'fixed',
+				overflowY: 'scroll',
+				top : -scrollPos,
+				width:'100%'
+			});
+			return scrollPos;
+		};
+
+		var closeModal = function () {
+			console.log("scrollPos",scrollPos);
+			$('.modal-layer').removeClass('modal-layer-show');
+			$("body").removeClass("modal-fix");
+			$('body').css({
+				overflow: '',
+				position: '',
+				top: ''
+			})
+			$(window).scrollTop(scrollPos);
+			$('.modal').removeClass('modal__show');
+			$('.enter').removeClass('enter--open');
+		};
+
+		var initModal = function(el){
+			openModal();
+			$('.modal').each(function () {
+				if ($(this).data('modal')===el){
+					$(this).addClass('modal__show')
+				} else {
+					$(this).removeClass('modal__show')
+				}
+			});
+			var modalHeightCont = $(window).height();
+			$('.modal-filter').height(modalHeightCont);
+			$('.modal-wrap').css('height',modalHeightCont );
+			$('.modal-wrap').css('minHeight',modalHeightCont );
+		}
+
+		$('.modal-get').click(function (){
+			var currentModal = $(this).data("modal");
+			initModal(currentModal);
+		});
+
+		$('.modal-layer , .modal-close').click(function (){
+			closeModal();
+	});
+	//modals===end
 
 	/* ###### For only ies  ######*/
 	//if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)){
@@ -52,23 +198,29 @@ $(document).ready(function(){
 	 });
 	// ==== clear storage end =====
 
-	
-	/* ###### For SlideToggle Elements  ######*/
-	/*var hideToggle = function(targetClick,toggleEl) {
-		$(targetClick).click(function(event){
-				event.stopPropagation();
-				$(toggleEl).slideToggle("fast");
-		});
-		$(toggleEl).on("click", function (event) {
-			event.stopPropagation();
-		});
-		$(document).on("click", function () {
-				$(toggleEl).hide();
-		});
+	ymaps.ready(init);
+	function init () {
+			// Создание экземпляра карты и его привязка к контейнеру с
+			// заданным id ("map").
+			map = new ymaps.Map('map', {
+					center: [56.326944, 44.0075], // Нижний Новгород
+					zoom: 14,
+					//type: 'yandex#satellite'
+			});
+			map.controls.remove('geolocationControl');
+			map.controls.remove('searchControl');
+			map.controls.remove('trafficControl');
+			map.controls.remove('typeSelector');
+			map.controls.remove('fullscreenControl');
+			map.controls.remove('rulerControl');
+			map.behaviors.disable(['scrollZoom']);
+			map.controls.remove(['zoomControl']);
+			var myPlacemark0 = new ymaps.Placemark([55.752577, 37.632134])
 	}
-	hideToggle('.icon-bars','.top-menu_link');*/
 
-})
+
+
+	})
 
 //cash SVG
 

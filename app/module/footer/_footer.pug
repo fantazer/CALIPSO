@@ -1,3 +1,79 @@
 mixin footer()
 	//block footer
+	.footer-wrap(style="background-image:url('img/footer.png')")
+		.main-cont
+			.footer
+				.footer__copy
+					.footer__copy-title калипсо, 2018
+					.footer__copy-text Политика конфиденциальности
+				ul.footer__menu
+					li
+						a(href="#").footer__menu-el Услуги
+					li
+						a(href="#").footer__menu-el Отзывы
+					li
+						a(href="#").footer__menu-el О компании
+					li
+						a(href="#").footer__menu-el Контакты
+				.footer__get
+					div(data-modal="order").footer__get-el.modal-get Онлайн запись
+					div(data-modal="call").footer__get-el.modal-get Заказать звонок
+				.footer__contact
+					.footer__contact-el
+						.footer__contact-icon
+							+icon("phone","icon")
+						a(href="tel:8 800 555 3535").footer__contact-text 8 800 555 3535
+					.footer__contact-el
+						.footer__contact-icon
+							+icon("location","icon")
+						.footer__contact-text г. Новосибирск, ул. Гагарина, 62а
+					.footer__contact-el
+						.footer__contact-icon
+							+icon("clock    ","icon")
+						.footer__contact-text 9:00 - 20:00 (ежедневно)
+	.modal-layer
+		.modal-cont
+			.modal-filter
+			.modal-wrap
+				.modal(data-modal="call")
+					.modal-content
+						.modal-close
+							+icon("close","icon")
+						.modal-title заказать звонок
+						form( action="javascript:void(null);")
+							.input-row
+								input(type="text" name="name" placeholder="Ваше имя").input
+							.input-row
+								input(type="text" name="phone" placeholder="Ваш телефон").input
+							.check-el.modal-agree
+								label.style-label.style-label--checkbox
+									input(type="checkbox").sytle-input
+									.sytle-input-element
+										+icon("checked","icon-check")
+									.sytle-input-text Я согласен с условиями обработки персональных данных
+							.row-mid
+								input(type="submit" value="отправить" class="form-get")
+				.modal(data-modal="order")
+					.modal-content
+						.modal-close
+							+icon("close","icon")
+						.modal-title Оставить заявку
+						form( action="javascript:void(null);")
+							.input-row
+								input(type="text" name="name" placeholder="Ваше имя").input
+							.input-row.input-row--half
+								input(type="text" name="phone" placeholder="Ваш телефон").input
+								input(type="text" name="phone" placeholder="Ваша почта").input
+							.input-row
+								textarea(name="", cols="30", rows="10" class="input")
+							.check-el.modal-agree
+								label.style-label.style-label--checkbox
+									input(type="checkbox").sytle-input
+									.sytle-input-element
+										+icon("checked","icon-check")
+									.sytle-input-text Я согласен с условиями обработки персональных данных
+							.row-mid
+								input(type="submit" value="отправить" class="form-get")
+
+
 	//block footer end

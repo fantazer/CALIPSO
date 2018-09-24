@@ -1,56 +1,188 @@
 include block_html/_style.pug
 include block_html/_include.pug
 
-.main-head
-	+header()
-	.main-banner__filter
-	.main-banner(style="background-image:url('img/banner.jpg')")
-		.main-banner__cont
-			.main-banner__sub-title услуги автосервиса
-			.main-banner__title капительный ремонт двигателей
-			.main-banner__get.get-modal онлайн заявка
-.main-cont
-	.service
-		.service__row
-			.service__row-el
-				.service__circle
-					.service__icon
-						+icon("bag","icon")
-				.service__sub-title двигателей
-				.service__title диагностика
-			.service__row-el
-				.service__circle
-					.service__icon
-						+icon("wheel","icon")
-				.service__sub-title услуги автосервиса
-				.service__title ремонта
-			.service__row-el
-				.service__circle
-					.service__icon
-						+icon("tools","icon")
-				.service__sub-title услуги автосервиса
-				.service__title обслуживание
-		.service-banner(style="background-image:url('img/banner-item.jpg')")
-			.service-banner__content
-				.service-banner__sub-title обслуживание
-				.service-banner__title nissan gtr
-		.service__row
-			.service__row-el
-				.service__circle
-					.service__icon
-						+icon("service","icon")
-				.service__sub-title услуги автосервиса
-				.service__title дополнительное оборудование
-			.service__row-el
-				.service__circle
-					.service__icon
-						+icon("propeller","icon")
-				.service__sub-title услуги автосервиса
-				.service__title нестандартные работы
-			.service__row-el
-				.service__circle
-					.service__icon
-						+icon("chip","icon")
-				.service__sub-title услуги автосервиса
-				.service__title чип-тюнинг
+.page
+	.main-head
+		+header()
+		//main-banner
+		.main-banner__filter
+		.main-banner(style="background-image:url('img/banner.jpg')")
+			.main-banner__cont
+				.main-banner__sub-title услуги автосервиса
+				a(href="#").main-banner__title капительный ремонт двигателей
+				.main-banner__get.get-modal онлайн заявка
+
+	.content
+		//services
+		.main-cont
+			.section.service
+				.service__row
+					.service__row-el
+						.service__circle
+							.service__icon
+								+icon("bag","icon")
+						.service__sub-title двигателей
+						.service__title диагностика
+					.service__row-el
+						.service__circle
+							.service__icon
+								+icon("wheel","icon")
+						.service__sub-title услуги автосервиса
+						.service__title ремонта <br> ходовой части
+					.service__row-el
+						.service__circle
+							.service__icon
+								+icon("tools","icon")
+						.service__sub-title услуги автосервиса
+						.service__title обслуживание
+				.service-banner(style="background-image:url('img/banner-item.jpg')")
+					.service-banner__content
+						.service-banner__sub-title обслуживание
+						.service-banner__title nissan gtr
+				.service__row
+					.service__row-el
+						.service__circle
+							.service__icon
+								+icon("service","icon")
+						.service__sub-title услуги автосервиса
+						.service__title дополнительное оборудование
+					.service__row-el
+						.service__circle
+							.service__icon
+								+icon("propeller","icon")
+						.service__sub-title услуги автосервиса
+						.service__title нестандартные работы
+					.service__row-el
+						.service__circle
+							.service__icon
+								+icon("chip","icon")
+						.service__sub-title услуги автосервиса
+						.service__title чип-тюнинг
+
+
+		//advantages
+		.section.advant-wrap
+			.main-cont
+				.advant
+					.advant-el
+						.advant-el__head
+							+icon("users","icon")
+						.advant-el__text Индивидуальный подход к каждому клиенту и двигателю
+					.advant-el
+						.advant-el__head
+							.advant-el__head-text 10 лет
+						.advant-el__text Опыт работы с разнообразными автомобилями и моторами
+					.advant-el
+						.advant-el__head
+							.advant-el__head-text
+								span До
+								| 1 год
+						.advant-el__text Гарантия на двигатель после ремонта
+					.advant-el
+						.advant-el__head
+							.advant-el__head-text 100%
+						.advant-el__text Ресурс и динамика нового двигателя возвращается
+
+
+		//work-slider
+		.section
+			.main-cont
+				.work-wrap.slider-wrap
+					.slider__head
+						.slider__head__title как мы работаем
+						.slider-control__wrap
+							.slider-control__el.slider-control--left
+								+icon("arrow-left-mark--color","icon")
+							.slider-control__el.slider-control--right
+								+icon("arrow-right-mark--color","icon")
+					.work-slider-wrap
+						.work-slider-line
+						.work-slider.slider-item
+							.work-slider__el
+								.work-slider__numb 01
+								.work-slider__title заявка
+								.work-slider__text При обращении в наш сервис по телефону мы, основываясь на вашем рассказе о проблеме, постараемся дать максимально точную информацию о последующих действиях, понять и разъяснить причину проблемы, дать рекомендации по возможности дальнейшей эксплуатации, приблизительно оценить стоимость ремонта исходя из опыта и описанной проблемы
+							.work-slider__el
+								.work-slider__numb 02
+								.work-slider__title диагностика
+								.work-slider__text Мы записываем вас на удобное для вас время для более точной диагностики и выявления неисправности. Только после проведения диагностических работ (замер компрессии, визуальный осмотр, проверка на посторонние звуки, диагностика электронных систем) принимается решение о разборе мотора
+							.work-slider__el
+								.work-slider__numb 03
+								.work-slider__title разбор
+								.work-slider__text Двигатель разбирается, тщательно отмываются и промеряются все детали и сопряжения, после чего мы предлагаем вам наиболее подходящий вариант восстановления
+							.work-slider__el
+								.work-slider__numb 04
+								.work-slider__title запчасти
+								.work-slider__text Вы выбираете подходящий вариант, оплачиваете необходимые запчасти и мы приступаем к работе
+							.work-slider__el
+								.work-slider__numb 05
+								.work-slider__title прием работы
+								.work-slider__text По готовности вы проверяете автомобиль в действии, выполняете тестовую поездку и всевозможный осмотр. Оплачиваете проделанную работу и получаете гарантию от 6 до 12 месяцев
+
+
+		//why
+		.section
+			.why-wrap
+				.main-cont
+					.why-title
+						.why-title__img
+							img(src="img/engine.png", alt="")
+						.why-title__text почему ремонт двигателя лучше покупки контрактного
+					.why-content
+						.why-content__el
+							.why-content__el-icon.why-content__el-icon--true
+								+icon("true","icon")
+							.why-content__el-text Ремонт двигателя с гарантией до 1 года позволяет Вам быть уверенным, что двигатель будет ходить как новый, заведется, не заклинит, не начнет «есть масло», и мастер в течение гарантийного срока и после будет готов в любое время принять Вас в нашем автосервисе
+						.why-content__el
+							.why-content__el-icon.why-content__el-icon--false
+								+icon("false","icon")
+							.why-content__el-text Покупка контрактного двигателя — это всегда лотерея! Узнать реальный пробег агрегата практически невозможно, да и условия транспортировки и хранения оставляют желать лучшего. Очень часто по истечении гарантийного срока (как правило, всего 2 недели) выясняется, что двигатель начинает расходовать масло, а то и просто клинит!
+
+
+		//review-slider
+		.section
+			.main-cont
+				.slider-wrap
+					.slider__head
+						.slider__head__title отзывы о нас
+						.slider-control__wrap
+							.slider-control__el.slider-control--left
+								+icon("arrow-left-mark--color","icon")
+							.slider-control__el.slider-control--right
+								+icon("arrow-right-mark--color","icon")
+					.review-slider.slider-item
+						- for (var i=0;i<3;i++)
+							.review-slider__el
+								.review-slider__content
+									.review-slider__info
+										.review-slider__info-date 12/02/2018,
+										.review-slider__info-text bmw x5
+									a(href="#").review-slider__title анастасия
+									.review-slider__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia ...
+									a(href="#").review-slider__get читать
+							.review-slider__el
+								.review-slider__img
+									.review-slider__img-item(style="background-image:url('img/item-1.jpg')")
+								.review-slider__content
+									.review-slider__info
+										.review-slider__info-date 12/02/2018,
+										.review-slider__info-text bmw x5
+									a(href="#").review-slider__title Валерия
+									.review-slider__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...
+							.review-slider__el
+								.review-slider__img
+									.review-slider__img-item(style="background-image:url('img/item-1.jpg')")
+									a(href="https://youtu.be/KOfyeYiO8Rk").fancybox.review-slider__img-filter
+										.review-slider__img-icon
+											+icon("play","icon")
+								.review-slider__content
+									.review-slider__info
+										.review-slider__info-date 12/02/2018,
+										.review-slider__info-text bmw x5
+									a(href="#").review-slider__title анастасия
+									.review-slider__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...
+
+	//footer
+	+footer()
+
 include ./block_html/_script.pug

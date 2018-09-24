@@ -1,0 +1,139 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		//link-list
+		.main-cont
+			.links
+				.link-list
+					- for (var i=0;i<6;i++)
+						a(href="#").link-list__el Audi
+						a(href="#").link-list__el Chevrolet
+						a(href="#").link-list__el BMW
+						a(href="#").link-list__el Ford
+				.link-list__info
+					.link-list__text Не нашли марку своей машины?
+					.link-list__get Оставить заявку
+
+		//catalog-banner
+		.main-cont
+			.catalog-banner-wrap
+				.catalog-banner__filter
+				.catalog-banner(style="background-image:url('img/banner.jpg')")
+					.catalog-banner__cont
+						.catalog-banner__sub-title услуги автосервиса
+						h1.catalog-banner__title капительный ремонт двигателей
+						.catalog-banner__get.get-modal онлайн заявка
+
+		//services
+		.main-cont
+			.service
+				.service__row
+					.service__row-el
+						.service__circle
+							.service__icon
+								+icon("bag","icon")
+						.service__sub-title двигателей
+						.service__title диагностика
+					.service__row-el
+						.service__circle
+							.service__icon
+								+icon("wheel","icon")
+						.service__sub-title услуги автосервиса
+						.service__title ремонта <br> ходовой части
+					.service__row-el
+						.service__circle
+							.service__icon
+								+icon("tools","icon")
+						.service__sub-title услуги автосервиса
+						.service__title обслуживание
+				.service-banner(style="background-image:url('img/banner-item.jpg')")
+					.service-banner__content
+						.service-banner__sub-title обслуживание
+						.service-banner__title nissan gtr
+				.service__row
+					.service__row-el
+						.service__circle
+							.service__icon
+								+icon("service","icon")
+						.service__sub-title услуги автосервиса
+						.service__title дополнительное оборудование
+					.service__row-el
+						.service__circle
+							.service__icon
+								+icon("propeller","icon")
+						.service__sub-title услуги автосервиса
+						.service__title нестандартные работы
+					.service__row-el
+						.service__circle
+							.service__icon
+								+icon("chip","icon")
+						.service__sub-title услуги автосервиса
+						.service__title чип-тюнинг
+
+		//content-text
+		.section
+			.main-cont
+				.content-text
+					h1 Заголовок
+					h2 Заголовок
+					h3 Заголовок
+					h4 Заголовок
+					p Задача организации, в особенности же сложившаяся структура организации играет важную роль в формировании направлений прогрессивного развития. Товарищи! начало повседневной работы по формированию позиции в значительной степени обуславливает создание направлений прогрессивного развития. Не следует, однако забывать, что консультация с широким активом позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям. Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание новых предложений. Равным образом консультация с широким активом играет важную роль в формировании систем массового участия.
+					a(href="#") ссылка
+
+					p С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка, а также укрепление и развитие структуры позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Равным образом новая модель организационной деятельности играет важную роль в формировании направлений прогрессивного развития. Равным образом реализация намеченных плановых заданий позволяет оценить значение существенных финансовых и административных условий.
+					ul
+						li список
+						li список
+						li список
+						li список
+
+		//review-slider
+		.section
+			.main-cont
+				.slider-wrap
+					.slider__head
+						.slider__head__title отзывы о нас
+						.slider-control__wrap
+							.slider-control__el.slider-control--left
+								+icon("arrow-left-mark--color","icon")
+							.slider-control__el.slider-control--right
+								+icon("arrow-right-mark--color","icon")
+					.review-slider.slider-item
+						- for (var i=0;i<3;i++)
+							.review-slider__el
+								.review-slider__content
+									.review-slider__info
+										.review-slider__info-date 12/02/2018,
+										.review-slider__info-text bmw x5
+									a(href="#").review-slider__title анастасия
+									.review-slider__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia ...
+									a(href="#").review-slider__get читать
+							.review-slider__el
+								.review-slider__img
+									.review-slider__img-item(style="background-image:url('img/item-1.jpg')")
+								.review-slider__content
+									.review-slider__info
+										.review-slider__info-date 12/02/2018,
+										.review-slider__info-text bmw x5
+									a(href="#").review-slider__title Валерия
+									.review-slider__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...
+							.review-slider__el
+								.review-slider__img
+									.review-slider__img-item(style="background-image:url('img/item-1.jpg')")
+									a(href="https://youtu.be/KOfyeYiO8Rk").fancybox.review-slider__img-filter
+										.review-slider__img-icon
+											+icon("play","icon")
+								.review-slider__content
+									.review-slider__info
+										.review-slider__info-date 12/02/2018,
+										.review-slider__info-text bmw x5
+									a(href="#").review-slider__title анастасия
+									.review-slider__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...
+
+
+	+footer()
+include ./block_html/_script.pug

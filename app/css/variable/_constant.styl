@@ -58,7 +58,7 @@ typeSize(fontSm,font)
 	font-weight:700
 
 .type--lg
-	typeSize(26,18)
+	typeSize(40,20)
 	font-family "Gotham"
 	font-weight:700
 
@@ -71,14 +71,19 @@ typeSize(fontSm,font)
 	font-weight bold
 
 h1
+	margin-top: 0
 	@extend .type--lg
 h2
+	margin-top: 0
 	@extend .type--md
 h3
+	margin-top: 0
 	@extend .type--main
 h4
+	margin-top: 0
 	@extend .type--sm
 h5
+	margin-top: 0
 	@extend .type--sm
 
 a
@@ -192,11 +197,16 @@ btnStyleLight(br-btn,color-btn)
 .btn--light
 	@extend .btn
 	border 1px solid $border-color
-	background-color #ffffff
+	background-color none
+	color white
+	text-transform: none
+	font-weight 600
+	letter-spacing 0.75px
 	&:hover
 		border 1px solid $orange
+		color $orange
 	.nav-icon
-		fill blue
+		fill $red
 
 .btn--grey
 	@extend .btn
@@ -343,3 +353,4 @@ button
 				round()
 				size 14px
 				background $red;
+

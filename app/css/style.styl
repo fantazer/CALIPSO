@@ -22,6 +22,7 @@ body
 
 .head-wrap
 	border-bottom 1px solid $border-color
+	margin-bottom: 35px
 //.main-cont
 .header
 	f()
@@ -56,13 +57,18 @@ body
 	justify-content: space-between
 	padding-left: 3%
 .header-menu__el
-	padding: 45px 3%
 	up()
+	tr(all)
+	padding: 45px 3%
 	color white
 	text-align: center
+	&:hover
+		color $red
 	&:last-child
 		padding-right: 0
 .header-menu__el--active
+	&:hover
+		color white
 	border-bottom 1px solid $orange
 
 .main-head
@@ -106,20 +112,27 @@ body
 	max-width 810px
 	margin-bottom: 5%
 	letter-spacing:5px
+	color white
+	display: block
+	tr(all)
+	&:hover
+		color white
+		opacity:.8
 
 .main-banner__get
 	@extend .btn--mark
 	@extend .btn--md
 //.get-modal
 
-//.service
+.section
+	margin-bottom: 100px
 .service__row
 	grid-template-columns repeat(3,1fr);
 	grid-gap 30px
 	display: grid
 	margin-bottom: 30px
 .service__row-el
-	padding: 30px 10px 95px 10px
+	padding: 30px 10px 50px 10px
 	f()
 	justify-content: flex-start
 	align-items: center
@@ -183,3 +196,703 @@ body
 	@extend .type--xl
 	up()
 	letter-spacing: 6px
+
+.advant-wrap
+	padding: 65px 0 85px 0
+	background: #18191d
+.advant
+	f()
+.advant-el
+	width: 100%
+	flex(mid)
+	fl()
+	border-left 1px solid $border-color
+	padding: 0 30px
+	&:first-child
+		border-left 0
+		padding-left: 0
+	&:last-child
+		padding-right: 0
+.advant-el__head
+	color $red
+	font-family "Gotham"
+	@extend .type--lg
+	up()
+	letter-spacing 4px
+	margin-bottom: 30px
+	.icon
+		width: 90px
+		height: 40px
+		fill $red
+.advant-el__head-text
+	f()
+	span
+		font-family:Open-Sans
+		font-size: 10px
+		text-transform: none
+		margin-top: 7px
+		letter-spacing: 1px
+		margin-right: 10px
+
+.advant-el__text
+	text-align: center
+	line-height: 1.6
+	opacity: .6
+
+.title
+	@extend .type--lg
+	margin-bottom: 60px
+	up()
+
+.slider__head
+	flex(between)
+	margin-bottom: 60px
+
+.slider__head__title
+	@extend .title
+	margin-bottom: 0
+	letter-spacing 4px
+
+.work-slider__el
+	padding-right: 40px
+
+.work-slider__numb
+	flex(mid)
+	round()
+	font-size: 18px
+	font-weight:700
+	color $red
+	size 56px
+	border 1px solid $border-color
+	font-family:Gotham
+	margin-bottom: 35px
+
+.work-slider__title
+	@extend .type--md
+	up()
+	letter-spacing: 1.2px
+	margin-bottom: 30px
+
+.work-slider__text
+	opacity: .6
+	line-height: 1.6
+
+.slider-control__wrap
+	f()
+	cp()
+	tr(all)
+.slider-control__el
+	tr(all)
+	&:hover
+		opacity:.7
+	&:first-child
+		margin-right: 10px
+	.icon
+		size 40px
+
+.work-slider-wrap
+	position: relative
+
+.work-slider-line
+	position: absolute
+	width: calc(100% - 20px)
+	height: 1px
+	background: $border-color
+	left 20px
+	top 27px
+
+.why-wrap
+	background: #18191d
+	padding: 45px 0 65px 0
+//.main-cont
+.why-title
+	f()
+	padding-bottom: 50px
+	margin-bottom: 40px
+	border-bottom 1px solid $border-color
+.why-title__img
+	margin-right: 30px
+	size 140px
+.why-title__text
+	@extend .type--lg
+	up()
+	line-height: 1.6
+	letter-spacing 4px
+	width: 75%
+.why-content
+	flex(between)
+.why-content__el
+	width: 47%
+	f()
+.why-content__el-icon
+	margin-right: 25px
+	.icon
+		size 40px
+.why-content__el-icon--true
+	fill #7fff00
+.why-content__el-icon--false
+	fill $red
+.why-content__el-text
+	line-height: 1.6
+
+.footer-wrap
+	bg-full()
+	padding: 80px 0
+.footer
+	f()
+	justify-content: space-between
+	align-items: flex-start
+//.footer__copy
+.footer__copy-title
+	@extend .type--md
+	font-weight 700
+	letter-spacing 2.4px
+	up()
+	margin-bottom: 25px
+.footer__copy-text
+	opacity .6
+
+.footer__menu
+	list-style: none
+	padding:0
+	margin: 0
+.footer__menu-el
+	opacity .6
+	margin-bottom: 25px
+	display: block
+	color white
+	tr(all)
+	&:hover
+		color $red
+
+.footer__get
+	f()
+	fl()
+.footer__get-el
+	&:first-child
+		margin-bottom: 30px
+	@extend .btn--md
+	@extend .btn--light
+	tr(all)
+
+//.footer__contact
+.footer__contact-el
+	margin-bottom: 25px
+	f()
+.footer__contact-icon
+	margin-right: 20px
+	.icon
+		size 20px
+		fill $red
+.footer__contact-text
+	color white!important
+
+.review-slider
+	.slick-slide
+		margin: 0 15px
+	.slick-list
+		margin: 0 -30px
+
+.review-slider__el
+	background: #18191d
+.review-slider__img
+	position: relative
+	flex(mid)
+.review-slider__img-item
+	bg-full()
+	padding: 30% 10%
+	width: 100%
+.review-slider__img-filter
+	position: absolute
+	top 0
+	left 0
+	background: rgba(0, 0, 0, 0.5)
+	width: 100%
+	height: 100%
+	flex(mid)
+	cp()
+	outline:none!important
+	&:focus
+		outline:none!important
+	&:hover
+		outline:none!important
+		.icon
+			fill $orange
+.review-slider__img-icon
+	.icon
+		size 50px
+		fill white
+		cp()
+		tr(all)
+
+.review-slider__content
+	padding: 25px 30px 40px 30px
+.review-slider__info
+	f()
+	align-items: center
+	margin-bottom: 15px
+.review-slider__info-date
+	opacity:.4
+	margin-right: 5px
+	@extend .type--sm
+.review-slider__info-text
+	up()
+	color $red
+	@extend .type--sm
+	font-weight 600
+	letter-spacing 0.6px
+.review-slider__title
+	@extend .type--md
+	letter-spacing 1.2px
+	margin-bottom: 25px
+	up()
+	display: block
+	color white
+	tr(all)
+	&:hover
+		color $red
+
+.review-slider__text
+	opacity:.7
+	line-height: 1.6
+
+.review-slider__get
+	color $red
+	up()
+	tr(all)
+	margin-top: 30px
+	display: block
+	&:hover
+		color $orange
+
+.page
+	min-height 100vh
+	f()
+	fl()
+.content
+	flex-grow 1
+
+.links
+	f()
+	justify-content: space-between
+	margin-bottom: 25px
+.link-list
+	f()
+	fw()
+	width: 70%
+.link-list__el
+	color white
+	opacity:.6
+	transition color .6s
+	display: inline-block
+	margin-right: 15px
+	margin-bottom: 15px
+	&:hover
+		opacity:1
+		color $red
+.link-list__info
+	f()
+	fl()
+	align-items: flex-end
+.link-list__text
+	text-align: right
+	margin-bottom: 15px
+.link-list__get
+	@extend .btn--md
+	@extend .btn--light
+	padding: 12px 30px
+
+
+.catalog-banner-wrap
+	position: relative
+	margin-bottom: 30px
+	.head-wrap
+		position: absolute
+		width: 100%
+		left 0
+		top 0
+		z-index 2
+
+.catalog-banner__filter
+	position: absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	background: rgba(0, 0, 0, 0.55)
+.catalog-banner
+	bg-full()
+	padding: 4% 10%
+	flex(mid)
+	fl()
+	max-height 690px
+.catalog-banner__cont
+	z-index 2
+	position: relative
+	text-align: center
+	margin-top: 5%
+.catalog-banner__sub-title
+	opacity 0.4
+	color #ffffff
+	font-family "Gotham"
+	@extend .type--sm
+	margin-bottom: 20px
+.catalog-banner__title
+	@extend .type--xl
+	line-height: 1.6
+	up()
+	max-width 810px
+	margin-bottom: 5%
+	letter-spacing:5px
+
+.catalog-banner__get
+	@extend .btn--mark
+	@extend .btn--md
+
+.content-text
+	line-height: 1.6
+	p,li
+		opacity: .6
+	a
+		color $red
+
+.main-title
+	margin:35px auto 70px auto
+	max-width 815px
+	text-align: center
+	@extend .type--xl
+	letter-spacing 5px
+	up()
+
+//.main-cont
+.kind
+	display: grid
+	grid-gap 30px
+	grid-template-columns repeat(3,1fr);
+	margin-bottom: 60px
+.kind__el
+	bg-full()
+	padding: 60% 10%
+	position: relative
+
+.kind__el-filter
+	position: absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	background-image linear-gradient(180deg, rgba(24, 25, 29, 0) 0%, rgba(0, 0, 0, 0.7) 100%)
+.kind__el-sub-title
+	width: 100%
+	text-align: center
+	opacity:.4
+	font-family "Gotham"
+	@extend .type--sm
+	font-weight 300
+	letter-spacing 2.4px
+	margin-bottom: 15px
+.kind__el-title
+	@extend .type--md
+	letter-spacing 1.2px
+	width: 100%
+	text-align: center
+	up()
+.kind__el-content
+	position: absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	f()
+	fl()
+	justify-content: flex-end
+	padding:30px 30px 60px 30px
+
+.request
+	f()
+	position: relative
+	margin-bottom: 70px
+.request-bg
+	position: absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	background: #18191d
+.request-bg__el
+	margin-left: auto
+	width: 50%
+	bg-full()
+	height: 100%
+//.main-cont
+//.request-wrap
+//.request-content
+.form
+	padding: 50px 50px 60px 0
+	width: 50%
+	form
+		margin-top: 40px
+
+.form__title
+	@extend .type--md
+	letter-spacing 1.2px
+	text-align: center
+	up()
+	margin-bottom: 15px
+.form__sub-title
+	margin-bottom: 40px
+	text-align: center
+.input-row
+	width: 100%
+	margin-bottom: 15px
+	.input
+		width: 100%
+		margin-bottom: 0
+.input-row--half
+	flex(between)
+	.input
+		width: 48.5%
+.form-agreement
+	flex(between)
+	margin-top: 45px
+.form-agreement__text
+	width: 60%
+	.check-el
+		width: 100%
+
+.sytle-input-text
+	width: calc(100% - 45px)
+	opacity: .6
+
+.form-get
+	@extend .btn--md
+	@extend .btn--mark
+	width: 190px
+	display: inline-block
+	padding: 17px 20px
+
+.request--left
+	.request-bg__el
+		margin-left: initial
+		margin-right: auto
+
+.request-content
+	margin-left: auto
+	width: 50%
+	padding: 50px 0 60px 50px
+	p
+		line-height: 1.6
+.request-content__title
+	@extend .type--md
+	letter-spacing 1.2px
+	up()
+
+.table
+	width: 100%
+	thead
+		td
+			up()
+			opacity 0.5
+			color #ffffff
+			font-family "Gotham"
+			@extend .type--sm
+	td
+		padding: 20px 0
+		border-bottom 1px solid $border-color
+		line-height: 1.6
+		&:first-child
+			width: 70%
+		&:nth-child(2                           )
+			width: 30%
+			text-align: right
+	margin-bottom: 30px
+
+.section-table
+	margin-bottom: 30px
+	margin-top: -30px
+
+.contact
+	f()
+	position: relative
+.contact-bg
+	position: absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	background: #18191d
+.contact-bg__el
+	margin-left: auto
+	width: 50%
+	bg-full()
+	height: 100%
+	overflow: hidden
+	z-index 2
+.contact-content
+	margin-right: auto
+	width: 50%
+	padding: 100px 50px 100px 0
+	position: relative
+	z-index 10
+	p
+		line-height: 1.6
+.contact-content__title
+	@extend .type--md
+	letter-spacing 1.2px
+	up()
+
+
+.contact-row
+	f()
+	margin-bottom: 40px
+.contact-row__icon
+	margin-right: 30px
+	.icon
+		size 31px
+		fill $red
+.contact-row__content
+	width:calc(100% - 60px)
+
+.contact-row__title
+	opacity 0.4
+	font-family "Gotham"
+	@extend .type--sm
+	letter-spacing 2.4px
+	up()
+.contact-row__text
+	@extend .type--md
+//.contact-bg
+//.contact-bg__el
+
+//modal
+.modal-layer
+	width: 100%
+	height: 100vh
+	position: fixed
+	z-index 1000
+	top 0
+	left 0
+	visibility: hidden
+	transition all 1s // duration for fade
+	opacity 0
+
+.modal-layer-show
+	visibility: visible
+	opacity 1
+
+.modal-cont
+	width: 100%
+	height: 100%
+	position: relative
+	max-height 100%
+	overflow: auto
+
+.modal-filter
+	+below(640px)
+		background: white
+	position: absolute
+	top: 0
+	left: 0
+	background: #18191d
+	width: 100%
+	height: 100vh
+	min-height 100vh
+
+.modal
+	+below(768px)
+		width: 100%
+		box-shadow 0 0 0
+	box-shadow 0 2px 4px rgba(0, 0, 0, 0.24)
+	transform translate(-50%,-350%)
+	position: absolute
+	top 50%
+	left 50%
+	opacity .1
+	transition transform .8s, opacity 1s
+	max-width 470px
+
+.modal-content
+	+below(768px)
+		padding: 20px
+	+below(640px)
+		max-height calc(100vh - 60px)
+		overflow-y scroll
+		padding: 20px 5px
+		width: 100%!important
+	//background: #2b8850
+	background: #26282d
+	position: relative
+	padding: 40px
+	color white
+	+below(768px)
+		width: 80%
+
+.modal-content--register
+	width: 500px
+	input
+		width: 100%
+		margin-bottom: 20px
+
+.modal__show
+	+below(768px)
+		flex(mid)
+	opacity 1
+	transform translate(-50%,-50%)
+
+.modal-close
+	+below(768px)
+		top 15px
+		right 15px
+	position: absolute
+	top: 20px
+	right: 20px
+	cp()
+	.icon
+		+below(768px)
+			size 15px
+		size 20px
+		fill white
+
+.modal-open
+	overflow: hidden
+	overflow-x: hidden
+	overflow-y: scroll
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+
+.modal-wrap
+	position: relative
+	height: 100%
+
+.modal-title
+	+below(768px)
+		font-size: 20px
+	font-family "Gotham"
+	@extend .type--md
+	letter-spacing 1.2px
+	text-align: center
+	color white
+	up()
+	margin-bottom: 30px
+.modal-text
+	+below(768px)
+		width: 100%
+		font-size: 12px
+	text-align: center
+	margin: 20px auto 40px auto
+	//width: 80%
+	font-size: 16px
+	line-height: 1.2
+	color #5f5f5f
+
+.modal-agree
+	margin-top: 30px
+	margin-bottom: 40px
+//modal===end
+
+.row-mid
+	flex(mid)
