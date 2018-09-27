@@ -45,20 +45,20 @@ typeSize(fontSm,font)
 	typeSize(12,10)
 
 .type--sm
-	typeSize(12,10)
+	typeSize(12,12)
 	font-family "Gotham"
 	font-weight:300
 
 .type--main
-	typeSize(15,13)
+	typeSize(15,15)
 
 .type--md
-	typeSize(24,18)
+	typeSize(24,24)
 	font-family "Gotham"
 	font-weight:700
 
 .type--lg
-	typeSize(40,20)
+	typeSize(40,24)
 	font-family "Gotham"
 	font-weight:700
 
@@ -158,6 +158,9 @@ btnStyleLight(br-btn,color-btn)
 	@extend .btn
 	font-size 15px
 	padding 20px 45px
+	+below(768px)
+		padding: 19px 25px
+		font-size: 15px
 
 .btn--lg
 	@extend .btn
@@ -306,9 +309,9 @@ button
 		height 30px
 		position relative
 		display inline-block
-		margin-right 10px
+		margin-right 20px
 		background none
-		border 1px solid #cfcfcf
+		border 1px solid rgba(255, 255, 255, 0.6)
 		br(0px)
 		cp()
 		tr(all)

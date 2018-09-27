@@ -32,8 +32,7 @@
 				<!--block header-->
 				<div class="head-wrap">
 					<div class="main-cont">
-						<div class="header">
-							<div class="header__logo"><img src="img/logo.png" alt="" /></div>
+						<div class="header"><a class="header__logo" href="/"><img src="img/logo.svg" alt="" /></a>
 							<div class="header-item header--location">
 								<div class="header-item__icon">
 									<svg class="icon">
@@ -50,6 +49,34 @@
 								</div><a class="header-item__text8" href="tell:8 800 555 3535">800 555 3535</a>
 							</div>
 							<div class="header-menu"><a class="header-menu__el header-menu__el--active" href="#">услуги</a><a class="header-menu__el" href="#">отзывы</a><a class="header-menu__el" href="#">о компании</a><a class="header-menu__el" href="#">контакты</a></div>
+							<div class="head-toggle">
+								<svg class="icon icon-open">
+									<use xlink:href="#menu"></use>
+								</svg>
+								<svg class="icon icon-close">
+									<use xlink:href="#close"></use>
+								</svg>
+							</div>
+							<div class="slide-menu">
+								<div class="slide-menu__list"><a class="slide-menu__list-el" href="#">услуги</a><a class="slide-menu__list-el" href="#">отзывы</a><a class="slide-menu__list-el" href="#">о компании</a><a class="slide-menu__list-el" href="#">контакты</a></div>
+								<div class="slide-menu-footer">
+									<div class="slide-menu-row">
+										<div class="slide-menu-row__icon">
+											<svg class="icon">
+												<use xlink:href="#phone"></use>
+											</svg>
+										</div><a class="slide-menu-row__text" href="tel:8 800 555 3535">8 800 555 3535</a>
+									</div>
+									<div class="slide-menu-row">
+										<div class="slide-menu-row__icon">
+											<svg class="icon">
+												<use xlink:href="#location"></use>
+											</svg>
+										</div>
+										<div class="slide-menu-row__text">ул. Гагарина, 62а</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -58,8 +85,8 @@
 				<div class="main-banner__filter"></div>
 				<div class="main-banner" style="background-image:url('img/banner.jpg')">
 					<div class="main-banner__cont">
-						<div class="main-banner__sub-title">услуги автосервиса</div><a class="main-banner__title" href="#">капительный ремонт двигателей</a>
-						<div class="main-banner__get get-modal">онлайн заявка</div>
+						<div class="main-banner__sub-title">услуги автосервиса</div><a class="main-banner__title" href="#">капитальный ремонт двигателей</a>
+						<div class="main-banner__get modal-get" data-modal="order">онлайн заявка</div>
 					</div>
 				</div>
 			</div>
@@ -67,8 +94,7 @@
 				<!--services-->
 				<div class="main-cont">
 					<div class="section service">
-						<div class="service__row">
-							<div class="service__row-el">
+						<div class="service__row"><a class="service__row-el" href="#">
 								<div class="service__circle">
 									<div class="service__icon">
 										<svg class="icon">
@@ -76,10 +102,9 @@
 										</svg>
 									</div>
 								</div>
-								<div class="service__sub-title">двигателей</div>
+								<div class="service__sub-title">услуги автосервиса</div>
 								<div class="service__title">диагностика</div>
-							</div>
-							<div class="service__row-el">
+							</a><a class="service__row-el" href="#">
 								<div class="service__circle">
 									<div class="service__icon">
 										<svg class="icon">
@@ -89,8 +114,7 @@
 								</div>
 								<div class="service__sub-title">услуги автосервиса</div>
 								<div class="service__title">ремонта <br> ходовой части</div>
-							</div>
-							<div class="service__row-el">
+							</a><a class="service__row-el" href="#">
 								<div class="service__circle">
 									<div class="service__icon">
 										<svg class="icon">
@@ -100,16 +124,13 @@
 								</div>
 								<div class="service__sub-title">услуги автосервиса</div>
 								<div class="service__title">обслуживание</div>
-							</div>
-						</div>
-						<div class="service-banner" style="background-image:url('img/banner-item.jpg')">
+							</a></div><a class="service-banner" href="#" style="background-image:url('img/banner-item.jpg')">
 							<div class="service-banner__content">
 								<div class="service-banner__sub-title">обслуживание</div>
 								<div class="service-banner__title">nissan gtr</div>
 							</div>
-						</div>
-						<div class="service__row">
-							<div class="service__row-el">
+						</a>
+						<div class="service__row"><a class="service__row-el" href="#">
 								<div class="service__circle">
 									<div class="service__icon">
 										<svg class="icon">
@@ -119,8 +140,7 @@
 								</div>
 								<div class="service__sub-title">услуги автосервиса</div>
 								<div class="service__title">дополнительное оборудование</div>
-							</div>
-							<div class="service__row-el">
+							</a><a class="service__row-el" href="#">
 								<div class="service__circle">
 									<div class="service__icon">
 										<svg class="icon">
@@ -130,8 +150,7 @@
 								</div>
 								<div class="service__sub-title">услуги автосервиса</div>
 								<div class="service__title">нестандартные работы</div>
-							</div>
-							<div class="service__row-el">
+							</a><a class="service__row-el" href="#">
 								<div class="service__circle">
 									<div class="service__icon">
 										<svg class="icon">
@@ -141,8 +160,7 @@
 								</div>
 								<div class="service__sub-title">услуги автосервиса</div>
 								<div class="service__title">чип-тюнинг</div>
-							</div>
-						</div>
+							</a></div>
 					</div>
 				</div>
 				<!--advantages-->
@@ -439,7 +457,7 @@
 							<div class="footer__contact-el">
 								<div class="footer__contact-icon">
 									<svg class="icon">
-										<use xlink:href="#clock    "></use>
+										<use xlink:href="#clock"></use>
 									</svg>
 								</div>
 								<div class="footer__contact-text">9:00 - 20:00 (ежедневно)</div>

@@ -3,8 +3,8 @@ mixin header()
 	.head-wrap
 		.main-cont
 			.header
-				.header__logo
-					img(src="img/logo.png", alt="")
+				a(href="/").header__logo
+					img(src="img/logo.svg", alt="")
 				.header-item.header--location
 					.header-item__icon
 						+icon("location","icon")
@@ -18,4 +18,22 @@ mixin header()
 					a(href="#").header-menu__el отзывы
 					a(href="#").header-menu__el о компании
 					a(href="#").header-menu__el контакты
+				.head-toggle
+					+icon("menu","icon icon-open")
+					+icon("close","icon icon-close")
+				.slide-menu
+					.slide-menu__list
+						a(href="#").slide-menu__list-el услуги
+						a(href="#").slide-menu__list-el отзывы
+						a(href="#").slide-menu__list-el о компании
+						a(href="#").slide-menu__list-el контакты
+					.slide-menu-footer
+						.slide-menu-row
+							.slide-menu-row__icon
+								+icon("phone","icon")
+							a(href="tel:8 800 555 3535").slide-menu-row__text 8 800 555 3535
+						.slide-menu-row
+							.slide-menu-row__icon
+								+icon("location","icon")
+							.slide-menu-row__text ул. Гагарина, 62а
 	//block header end

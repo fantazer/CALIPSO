@@ -10,20 +10,23 @@
 		infinite:false,
 		responsive: [
 			{
-				breakpoint: 768,
+				breakpoint: 1025,
 				settings: {
 					arrows: false,
-					centerMode: true,
-					centerPadding: '40px',
 					slidesToShow: 3
 				}
 			},
 			{
-				breakpoint: 480,
+				breakpoint: 769,
 				settings: {
 					arrows: false,
-					centerMode: true,
-					centerPadding: '40px',
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 481,
+				settings: {
+					arrows: false,
 					slidesToShow: 1
 				}
 			}
@@ -39,20 +42,23 @@
 		infinite:false,
 		responsive: [
 			{
-				breakpoint: 768,
+				breakpoint: 1025,
 				settings: {
 					arrows: false,
-					centerMode: true,
-					centerPadding: '40px',
 					slidesToShow: 3
 				}
 			},
 			{
-				breakpoint: 480,
+				breakpoint: 769,
 				settings: {
 					arrows: false,
-					centerMode: true,
-					centerPadding: '40px',
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 481,
+				settings: {
+					arrows: false,
 					slidesToShow: 1
 				}
 			}
@@ -68,15 +74,14 @@
 	});
 
 	//slick item height
-	sickHeight = function() {
+	slickHeight = function() {
 		var stHeight = $(' .review-slider .slick-track').height();
 		$('.review-slider__el').css('height', stHeight + 'px');
 		var stHeightEl = $('.b-wrap').find('.slick-slide').height();
 		console.log(stHeightEl);
 		$('.b-el').css('height', stHeightEl + 'px');
 	};
-
-	sickHeight();
+	slickHeight();
 
 	$('window').resize(function(){
 		sickHeight();
@@ -88,69 +93,102 @@
 	//video popup === end
 
 	//modals
+	var modalState = {
+		"isModalShow": false,
+		"scrollPos": 0
+	};
 	$('.modal-content').click(function(event){
-			event.stopPropagation();
-		});
-		var scrollPos = 0;
+		event.stopPropagation();
+	});
 
-		var openModal = function () {
+	var openModal = function () {
 		if(!$('.modal-layer').hasClass('modal-layer-show')){
 			$('.modal-layer').addClass('modal-layer-show');
-		}
-		 scrollPos = $(window).scrollTop();
+			modalState.scrollPos = $(window).scrollTop();
 			$('body').css({
-				overflow: 'hidden',
-				position: 'fixed',
-				overflowY: 'scroll',
-				top : -scrollPos,
-				width:'100%'
-			});
-			return scrollPos;
-		};
-
-		var closeModal = function () {
-			console.log("scrollPos",scrollPos);
-			$('.modal-layer').removeClass('modal-layer-show');
-			$("body").removeClass("modal-fix");
-			$('body').css({
-				overflow: '',
-				position: '',
-				top: ''
-			})
-			$(window).scrollTop(scrollPos);
-			$('.modal').removeClass('modal__show');
-			$('.enter').removeClass('enter--open');
-		};
-
-		var initModal = function(el){
-			openModal();
-			$('.modal').each(function () {
-				if ($(this).data('modal')===el){
-					$(this).addClass('modal__show')
-				} else {
-					$(this).removeClass('modal__show')
-				}
-			});
-			var modalHeightCont = $(window).height();
-			$('.modal-filter').height(modalHeightCont);
-			$('.modal-wrap').css('height',modalHeightCont );
-			$('.modal-wrap').css('minHeight',modalHeightCont );
+					overflow: 'hidden',
+					position: 'fixed',
+					overflowY: 'scroll',
+					top : -modalState.scrollPos,
+					width:'100%'
+				});
 		}
+		/*if($(window).width() < 640){
+		 		var viewportHeight = $('.modal-cont').outerHeight();
+				$('.modal-content').css('maxHeight', viewportHeight);
+		}*/
+		modalState.isModalShow = true;
+	};
 
-		$('.modal-get').click(function (){
-			var currentModal = $(this).data("modal");
-			initModal(currentModal);
+	var closeModal = function () {
+		$('.modal-layer').removeClass('modal-layer-show');
+		$('body').css({
+			overflow: '',
+			position: '',
+			top : modalState.scrollPos
 		});
+		$(window).scrollTop(modalState.scrollPos);
+		$('.modal').removeClass('modal__show');
+		modalState.isModalShow = false;
+	};
 
-		$('.modal-layer , .modal-close').click(function (){
-			closeModal();
+	var initModal = function(el){
+		openModal();
+		$('.modal').each(function () {
+			if ($(this).data('modal')===el){
+				$(this).addClass('modal__show')
+			} else {
+				$(this).removeClass('modal__show')
+			}
+		});
+		var modalHeightCont = $(window).height();
+		$('.modal-filter').height(modalHeightCont);
+		$('.modal-wrap').css('height',modalHeightCont );
+		$('.modal-wrap').css('minHeight',modalHeightCont );
+	};
+
+	$('.modal-get').click(function (){
+		var currentModal = $(this).data("modal");
+		initModal(currentModal);
+	});
+
+	$('.modal-layer , .modal-close').click(function (){
+		closeModal();
 	});
 	//modals===end
 
-	/* ###### For only ies  ######*/
-	//if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)){
-	//	//code
-	//}
+	//mobile menu
+	$('.head-toggle--open').click(function(){
+		$('body').css({
+			overflow: '',
+			position: '',
+			top: ''
+		})
+	});
+
+	$('.head-toggle').click(function(event){
+		event.stopPropagation();
+		$('.head-wrap').toggleClass('head--up');
+		$(this).toggleClass('head-toggle--open');
+		$('.slide-menu').toggleClass('slide-menu--open');
+		$('body').toggleClass('body-fix')
+	});
+
+	$('.slide-menu').on("click", function (event) {
+		event.stopPropagation();
+	});
+
+	$(document).on("click", function () {
+			$('.head-wrap').removeClass('head--up');
+			$('.head-toggle').removeClass('head-toggle--open');
+			$('.slide-menu').removeClass('slide-menu--open');
+			console.log(modalState.isModalShow);
+			if(modalState.isModalShow == false){
+				$('body').removeClass('body-fix')
+		}
+	});
+	//mobile menu===end
+
 
 	function detectIE() {
 	var ua = window.navigator.userAgent;
@@ -198,6 +236,7 @@
 	 });
 	// ==== clear storage end =====
 
+/*
 	ymaps.ready(init);
 	function init () {
 			// Создание экземпляра карты и его привязка к контейнеру с
@@ -218,6 +257,7 @@
 			var myPlacemark0 = new ymaps.Placemark([55.752577, 37.632134])
 	}
 
+*/
 
 
 	})

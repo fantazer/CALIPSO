@@ -15,9 +15,8 @@ body
 	color white
 	line-height 1.2
 	letter-spacing 0.01em
-	background: #26282d
 .main-cont
-	center(1200px,10px)
+	center(1200px,15px)
 
 
 .head-wrap
@@ -27,6 +26,8 @@ body
 .header
 	f()
 .header__logo
+	+below(640px)
+		width: 180px
 	width: 25%
 	padding-right: 20px
 	f()
@@ -34,6 +35,14 @@ body
 	img
 		width: 80%
 .header-item
+	+below(1200px)
+		font-size: 13px
+		width: 20%
+	+below(1024px)
+		padding: 15px
+		width: 25%
+	+below(768px)
+		display: none
 	flex(mid)
 	width: 17%
 	border-left 1px solid $border-color
@@ -47,16 +56,21 @@ body
 	margin-right: 15px
 	.icon
 		size 20px
-		fill $orange
+		fill $red
 //.header-item__text
 //.header-item--phone
 //.header-item__text8
 .header-menu
+	+below(1024px)
+		display: none
 	f()
 	width: 40%
 	justify-content: space-between
 	padding-left: 3%
 .header-menu__el
+	+below(1400px)
+		padding: 35px 2%
+		font-size:14px
 	up()
 	tr(all)
 	padding: 45px 3%
@@ -69,9 +83,14 @@ body
 .header-menu__el--active
 	&:hover
 		color white
-	border-bottom 1px solid $orange
+	border-bottom 2px solid $red
+	margin-bottom: -1px
 
 .main-head
+	+below(768px)
+		margin-bottom: 30px
+	+below(640px)
+		margin-bottom: 15px
 	position: relative
 	margin-bottom: 80px
 	.head-wrap
@@ -89,6 +108,10 @@ body
 	height: 100%
 	background: rgba(0, 0, 0, 0.55)
 .main-banner
+	+below(640px)
+		height: 100vh
+		min-height 320px
+		max-height initial
 	bg-full()
 	padding: 17% 10%
 	flex(mid)
@@ -98,14 +121,20 @@ body
 	z-index 2
 	position: relative
 	text-align: center
-	margin-top: 5%
+	margin-top: 5vw
 .main-banner__sub-title
 	opacity 0.4
 	color #ffffff
 	font-family "Gotham"
 	@extend .type--sm
 	margin-bottom: 20px
+	up()
+
 .main-banner__title
+	+below(640px)
+		margin-bottom: 20px
+		line-height: 1.4
+		letter-spacing:2.5px
 	@extend .type--xl
 	line-height: 1.6
 	up()
@@ -120,25 +149,43 @@ body
 		opacity:.8
 
 .main-banner__get
+	min-width 220px
 	@extend .btn--mark
 	@extend .btn--md
 //.get-modal
 
 .section
+	+below(768px)
+		margin-bottom: 30px
 	margin-bottom: 100px
 .service__row
+	+below(1024px)
+		grid-gap 15px
+		margin-bottom: 15px
+	+below(640px)
+		grid-template-columns 1fr;
 	grid-template-columns repeat(3,1fr);
 	grid-gap 30px
 	display: grid
 	margin-bottom: 30px
 .service__row-el
-	padding: 30px 10px 50px 10px
+	+below(640px)
+		padding-bottom: 34px
+	fl()
 	f()
+	padding: 30px 10px 50px 10px
 	justify-content: flex-start
 	align-items: center
-	fl()
 	background: $black
+	&:hover
+		.service__title
+			color $orange
 .service__circle
+	+below(1024px)
+		size 180px
+	+below(640px)
+		size 140px
+		margin-bottom: 30px
 	size 240px
 	flex(mid)
 	border 1px solid #404040
@@ -146,6 +193,10 @@ body
 	margin-bottom: 40px
 	position: relative
 	&:before
+		+below(1024px)
+			size 120px
+		+below(640px)
+			display: none
 		content ''
 		position: absolute
 		size 160px
@@ -157,28 +208,47 @@ body
 		size 60px
 		fill $red
 .service__sub-title
+	+below(640px)
+		margin-bottom: 15px
 	@extend .type--sm
 	up()
 	margin-bottom: 25px
 	letter-spacing .3em
 	color white
 	opacity: .4
+	text-align: center
 
 .service__title
+	+below(1024px)
+		font-size:16px
 	@extend .type--md
-	letter-spacing .1em
 	up()
+	tr(all)
+	letter-spacing .1em
 	text-align: center
 	line-height: 1.6
-
+	color white
 .service-banner
+	+below(640px)
+		padding: 44% 10%
+		margin-left: -15px
+		margin-right: -15px
+		margin-bottom: 15px
+	display: block
 	bg-full()
 	padding: 20% 10%
 	position: relative
 	margin-bottom: 30px
+	&:hover
+		.service-banner__content
+			color $orange
 .service-banner__content
+	+below(768px)
+		padding: 30px 10px
 	f()
 	fl()
+	tr(all)
+	color white
 	align-items: center
 	position: absolute
 	top 0
@@ -187,24 +257,49 @@ body
 	height: 100%
 	padding: 50px 20px
 .service-banner__sub-title
+	+below(768px)
+		margin-bottom: 15px
 	margin-bottom: 25px
 	opacity: .4
 	@extend .type--sm
 	up()
 	letter-spacing 2.4px
 .service-banner__title
+	+below(640px)
+		font-size: 28px
+		text-align: center
 	@extend .type--xl
 	up()
 	letter-spacing: 6px
 
 .advant-wrap
+	+below(640px)
+		padding: 0
+		margin-bottom: 30px
 	padding: 65px 0 85px 0
 	background: #18191d
+	margin-bottom: 100px
 .advant
+	+below(768px)
+		fw()
 	f()
 .advant-el
+	+below(768px)
+		width: 50%
+		padding: 30px 10px!important
+		&:nth-child(3)
+			border 0
+	+below(640px)
+		width: 100%
+		border 0
+		border-bottom 1px solid $border-color
+		&:nth-child(3)
+			border-bottom 1px solid $border-color
+		&:last-child
+			border 0
 	width: 100%
-	flex(mid)
+	f()
+	align-items: center
 	fl()
 	border-left 1px solid $border-color
 	padding: 0 30px
@@ -214,6 +309,8 @@ body
 	&:last-child
 		padding-right: 0
 .advant-el__head
+	+below(640px)
+		margin-bottom: 20px
 	color $red
 	font-family "Gotham"
 	@extend .type--lg
@@ -225,6 +322,9 @@ body
 		height: 40px
 		fill $red
 .advant-el__head-text
+	+below(1024px)
+		font-size: 32px
+
 	f()
 	span
 		font-family:Open-Sans
@@ -235,6 +335,8 @@ body
 		margin-right: 10px
 
 .advant-el__text
+	+below(640px)
+		width: 80%
 	text-align: center
 	line-height: 1.6
 	opacity: .6
@@ -245,13 +347,19 @@ body
 	up()
 
 .slider__head
+	+below(640px)
+		fw()
+		margin-bottom:30px
 	flex(between)
 	margin-bottom: 60px
 
 .slider__head__title
+	+below(480px)
+		margin-bottom: 30px
 	@extend .title
 	margin-bottom: 0
 	letter-spacing 4px
+	line-height: 1.6
 
 .work-slider__el
 	padding-right: 40px
@@ -302,12 +410,19 @@ body
 	top 27px
 
 .why-wrap
+	+below(640px)
+		padding: 40px 0 45px 0
+
 	background: #18191d
 	padding: 45px 0 65px 0
 //.main-cont
 .why-title
+	+below(640px)
+		fw()
+		border 0
+		padding-bottom: 0
 	f()
-	padding-bottom: 50px
+	padding-bottom: 30px
 	margin-bottom: 40px
 	border-bottom 1px solid $border-color
 .why-title__img
@@ -320,11 +435,19 @@ body
 	letter-spacing 4px
 	width: 75%
 .why-content
-	flex(between)
+	+below(640px)
+		fw()
+	f()
+	justify-content: space-between
 .why-content__el
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
 	width: 47%
 	f()
 .why-content__el-icon
+	+below(640px)
+		margin-right: 15px
 	margin-right: 25px
 	.icon
 		size 40px
@@ -334,15 +457,29 @@ body
 	fill $red
 .why-content__el-text
 	line-height: 1.6
+	opacity:.6
 
 .footer-wrap
+	+below(768px)
+		padding: 30px 0
 	bg-full()
 	padding: 80px 0
 .footer
+	+below(1024px)
+		fw()
+	+below(960px)
+		center(640px,0)
+		flex(mid)
 	f()
 	justify-content: space-between
 	align-items: flex-start
-//.footer__copy
+.footer__copy
+	+below(968px)
+		width: 100%
+		margin-bottom: 20px
+		text-align: center
+	+below(480px)
+		text-align: left
 .footer__copy-title
 	@extend .type--md
 	font-weight 700
@@ -351,8 +488,12 @@ body
 	margin-bottom: 25px
 .footer__copy-text
 	opacity .6
+	+below(640px)
+		margin-bottom: 35px
 
 .footer__menu
+	+below(1024px)
+		display: none
 	list-style: none
 	padding:0
 	margin: 0
@@ -366,17 +507,33 @@ body
 		color $red
 
 .footer__get
+	+below(960px)
+		width: 100%
+		margin-bottom: 20px
+		align-items: center
+		justify-content: center
+	+below(640px)
+		margin-bottom: 40px
 	f()
 	fl()
 .footer__get-el
+	+below(480px)
+		width: 100%
 	&:first-child
 		margin-bottom: 30px
 	@extend .btn--md
 	@extend .btn--light
 	tr(all)
+	padding 12px 35px
 
-//.footer__contact
+.footer__contact
+	+below(960px)
+		width: 100%
+		flex(mid)
+		fl()
 .footer__contact-el
+	+below(480px)
+		width: 100%
 	margin-bottom: 25px
 	f()
 .footer__contact-icon
@@ -385,19 +542,26 @@ body
 		size 20px
 		fill $red
 .footer__contact-text
+	+below(640px)
+		font-size: 14px
 	color white!important
 
 .review-slider
 	.slick-slide
+		+below(480px)
+			margin: 0
 		margin: 0 15px
 	.slick-list
+		+below(1024px)
+			margin: 0 -15px
+		+below(480px)
+			margin: 0
 		margin: 0 -30px
 
 .review-slider__el
 	background: #18191d
 .review-slider__img
 	position: relative
-	flex(mid)
 .review-slider__img-item
 	bg-full()
 	padding: 30% 10%
@@ -426,6 +590,8 @@ body
 		tr(all)
 
 .review-slider__content
+	+below(768px)
+		padding: 25px 15px
 	padding: 25px 30px 40px 30px
 .review-slider__info
 	f()
@@ -469,14 +635,19 @@ body
 	min-height 100vh
 	f()
 	fl()
+	background: #26282d
+
 .content
 	flex-grow 1
 
 .links
 	f()
 	justify-content: space-between
+	align-items: flex-start
 	margin-bottom: 25px
 .link-list
+	+below(768px)
+		display: none
 	f()
 	fw()
 	width: 70%
@@ -484,13 +655,16 @@ body
 	color white
 	opacity:.6
 	transition color .6s
-	display: inline-block
 	margin-right: 15px
 	margin-bottom: 15px
+	display: inline-block
 	&:hover
 		opacity:1
 		color $red
 .link-list__info
+	+below(768px)
+		width: 100%
+		flex(mid)
 	f()
 	fl()
 	align-items: flex-end
@@ -504,6 +678,8 @@ body
 
 
 .catalog-banner-wrap
+	+below(768px)
+		margin-bottom: 15px
 	position: relative
 	margin-bottom: 30px
 	.head-wrap
@@ -544,7 +720,8 @@ body
 	max-width 810px
 	margin-bottom: 5%
 	letter-spacing:5px
-
+	display: block
+	color white
 .catalog-banner__get
 	@extend .btn--mark
 	@extend .btn--md
@@ -557,7 +734,12 @@ body
 		color $red
 
 .main-title
-	margin:35px auto 70px auto
+	+below(1024px)
+		font-size: 42px
+	+below(768px)
+		margin 0 0 30px 0
+		font-size: 28px
+	margin:15px auto 60px auto
 	max-width 815px
 	text-align: center
 	@extend .type--xl
@@ -566,13 +748,20 @@ body
 
 //.main-cont
 .kind
+	+below(768px)
+		grid-template-columns repeat(2,1fr);
+		grid-gap 15px
+	+below(640px)
+		grid-template-columns 1fr
 	display: grid
 	grid-gap 30px
 	grid-template-columns repeat(3,1fr);
 	margin-bottom: 60px
 .kind__el
 	bg-full()
-	padding: 60% 10%
+	max-height 470px
+	max-width 370
+	padding: 13vw 10vw
 	position: relative
 
 .kind__el-filter
@@ -591,13 +780,17 @@ body
 	font-weight 300
 	letter-spacing 2.4px
 	margin-bottom: 15px
+	color white
 .kind__el-title
 	@extend .type--md
 	letter-spacing 1.2px
 	width: 100%
 	text-align: center
 	up()
+	color white
 .kind__el-content
+	+below(768px)
+		padding: 30px 20px
 	position: absolute
 	top 0
 	left 0
@@ -609,6 +802,8 @@ body
 	padding:30px 30px 60px 30px
 
 .request
+	+below(768px)
+		margin-bottom: 15px
 	f()
 	position: relative
 	margin-bottom: 70px
@@ -620,6 +815,10 @@ body
 	height: 100%
 	background: #18191d
 .request-bg__el
+	+below(1024px)
+		width: 25%
+	+below(768px)
+		display: none
 	margin-left: auto
 	width: 50%
 	bg-full()
@@ -628,9 +827,19 @@ body
 //.request-wrap
 //.request-content
 .form
+	+below(1024px)
+		width: 75%
+		padding: 30px
+	+below(768px)
+		width: 100%
+		padding: 30px 20px
+	+below(480px)
+		padding: 30px 0px
 	padding: 50px 50px 60px 0
 	width: 50%
 	form
+		+below(768px)
+			margin-top: 30px
 		margin-top: 40px
 
 .form__title
@@ -649,22 +858,38 @@ body
 		width: 100%
 		margin-bottom: 0
 .input-row--half
+	+below(640px)
+		fw()
 	flex(between)
 	.input
+		+below(640px)
+			width: 100%
+			&:first-child
+				margin-bottom: 15px
 		width: 48.5%
 .form-agreement
+	+below(640px)
+		fw()
+		margin-top: 30px
 	flex(between)
 	margin-top: 45px
 .form-agreement__text
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
 	width: 60%
 	.check-el
 		width: 100%
 
 .sytle-input-text
+	+below(640px)
+		font-size: 12px
 	width: calc(100% - 45px)
 	opacity: .6
 
 .form-get
+	+below(480px)
+		width: 100%
 	@extend .btn--md
 	@extend .btn--mark
 	width: 190px
@@ -677,6 +902,11 @@ body
 		margin-right: auto
 
 .request-content
+	+below(1024px)
+		width: 75%
+	+below(768px)
+		width: 100%
+		padding: 30px 0
 	margin-left: auto
 	width: 50%
 	padding: 50px 0 60px 50px
@@ -688,6 +918,8 @@ body
 	up()
 
 .table
+	+below(640px)
+		font-size: 12px
 	width: 100%
 	thead
 		td
@@ -696,9 +928,12 @@ body
 			color #ffffff
 			font-family "Gotham"
 			@extend .type--sm
+			border-bottom 2px solid #414347
 	td
+		+below(640px)
+			vertical-align: top
 		padding: 20px 0
-		border-bottom 1px solid $border-color
+		border-bottom 2px solid #313338
 		line-height: 1.6
 		&:first-child
 			width: 70%
@@ -708,13 +943,19 @@ body
 	margin-bottom: 30px
 
 .section-table
+	+below(768px)
+		margin-top: 0
 	margin-bottom: 30px
 	margin-top: -30px
 
 .contact
+	+below(768px)
+		fw()
 	f()
 	position: relative
 .contact-bg
+	+below(768px)
+		position: static
 	position: absolute
 	top 0
 	left 0
@@ -722,6 +963,8 @@ body
 	height: 100%
 	background: #18191d
 .contact-bg__el
+	+below(768px)
+		width: 100%
 	margin-left: auto
 	width: 50%
 	bg-full()
@@ -729,6 +972,11 @@ body
 	overflow: hidden
 	z-index 2
 .contact-content
+	+below(768px)
+		width: 100%
+		padding: 30px 0
+	+below(640px)
+		padding: 0
 	margin-right: auto
 	width: 50%
 	padding: 100px 50px 100px 0
@@ -759,7 +1007,10 @@ body
 	@extend .type--sm
 	letter-spacing 2.4px
 	up()
+	margin-bottom: 5px
 .contact-row__text
+	+below(640px)
+		font-size: 18px
 	@extend .type--md
 //.contact-bg
 //.contact-bg__el
@@ -788,8 +1039,6 @@ body
 	overflow: auto
 
 .modal-filter
-	+below(640px)
-		background: white
 	position: absolute
 	top: 0
 	left: 0
@@ -817,7 +1066,7 @@ body
 	+below(640px)
 		max-height calc(100vh - 60px)
 		overflow-y scroll
-		padding: 20px 5px
+		padding: 20px 10px
 		width: 100%!important
 	//background: #2b8850
 	background: #26282d
@@ -896,3 +1145,87 @@ body
 
 .row-mid
 	flex(mid)
+
+.head-toggle
+	margin-left: auto
+	size 50px
+	flex(mid)
+	cp()
+	+above(1025px)
+		display: none
+	.icon
+		size 25px
+		fill white
+	.icon-close
+		display: none
+
+.head-toggle--open
+	.icon-close
+		display: block
+	.icon-open
+		display: none
+
+.slide-menu
+	+above(1025px)
+		display: none !important
+	+below(640px)
+		top: 51px
+	+below(480px)
+		width: 100%
+	background: $black
+	color white
+	position: fixed
+	height: calc(100% - 50px)
+	z-index 1250
+	top 54px
+	right 0
+	padding: 25px
+	width: 320px
+	transform translateX(100%)
+	tr(all)
+.slide-menu--open
+	transform translateX(0%)
+	overflow-y: auto
+.slide-menu__list
+	margin-bottom: 40px
+.slide-menu__list-el
+	@extend .type--lg
+	display: block
+	margin-bottom: 40px
+	color white
+	font-size: 16px
+	up()
+	tr(all)
+	font-family: Open-Sans
+	&:hover
+		color $red
+
+.head--up
+	+below(640px)
+		background: $black
+		border-bottom 1px solid $border-color
+	z-index 2000!important
+
+.slide-menu-footer
+	padding-top: 30px
+	border-top 1px solid $border-color
+	margin-top: 20%
+.slide-menu-row
+	f()
+	margin-bottom: 20px
+.slide-menu-row__icon
+	margin-right: 20px
+	.icon
+		size 20px
+		fill $red
+.slide-menu-row__text
+	color white
+
+.body-fix
+	overflow: hidden!important
+	position: fixed!important
+	overflowY: scroll!important
+	width:100%!important
+
+form
+	margin-top: 0

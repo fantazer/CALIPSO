@@ -15,7 +15,7 @@ include block_html/_include.pug
 						a(href="#").link-list__el Ford
 				.link-list__info
 					.link-list__text Не нашли марку своей машины?
-					.link-list__get Оставить заявку
+					div(data-modal="order").link-list__get.modal-get Оставить заявку
 
 		//catalog-banner
 		.main-cont
@@ -24,54 +24,56 @@ include block_html/_include.pug
 				.catalog-banner(style="background-image:url('img/banner.jpg')")
 					.catalog-banner__cont
 						.catalog-banner__sub-title услуги автосервиса
-						h1.catalog-banner__title капительный ремонт двигателей
-						.catalog-banner__get.get-modal онлайн заявка
+						h1.catalog-banner__title капитальный ремонт двигателей
+						div(data-modal="order").catalog-banner__get.modal-get онлайн заявка
 
 		//services
 		.main-cont
-			.service
+			.section.service
 				.service__row
-					.service__row-el
+					a(href="#").service__row-el
 						.service__circle
 							.service__icon
 								+icon("bag","icon")
-						.service__sub-title двигателей
+						.service__sub-title услуги автосервиса
 						.service__title диагностика
-					.service__row-el
+					a(href="#").service__row-el
 						.service__circle
 							.service__icon
 								+icon("wheel","icon")
 						.service__sub-title услуги автосервиса
 						.service__title ремонта <br> ходовой части
-					.service__row-el
+					a(href="#").service__row-el
 						.service__circle
 							.service__icon
 								+icon("tools","icon")
 						.service__sub-title услуги автосервиса
 						.service__title обслуживание
-				.service-banner(style="background-image:url('img/banner-item.jpg')")
+				a(href="#" style="background-image:url('img/banner-item.jpg')").service-banner
 					.service-banner__content
 						.service-banner__sub-title обслуживание
 						.service-banner__title nissan gtr
 				.service__row
-					.service__row-el
+					a(href="#").service__row-el
 						.service__circle
 							.service__icon
 								+icon("service","icon")
 						.service__sub-title услуги автосервиса
 						.service__title дополнительное оборудование
-					.service__row-el
+					a(href="#").service__row-el
 						.service__circle
 							.service__icon
 								+icon("propeller","icon")
 						.service__sub-title услуги автосервиса
 						.service__title нестандартные работы
-					.service__row-el
+					a(href="#").service__row-el
 						.service__circle
 							.service__icon
 								+icon("chip","icon")
 						.service__sub-title услуги автосервиса
 						.service__title чип-тюнинг
+
+
 
 		//content-text
 		.section
