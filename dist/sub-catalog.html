@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html>
 	<!--create by ANATOLY KUZNETSOV-->
 
 	<head>
@@ -79,50 +79,49 @@
 				<div class="main-title">капитальный ремонт двигателей</div>
 				<!--kind-car-->
 				<div class="main-cont">
-					<div class="kind">
-						<div class="kind__el" style="background-image:url('img/item-car-1.jpg')">
+					<div class="kind"><a class="kind__el" href="#">
+							<div class="kind__el-img" style="background-image:url('img/item-car-1.jpg')"></div>
 							<div class="kind__el-filter"></div>
 							<div class="kind__el-content">
 								<div class="kind__el-sub-title">ремонт двигателей</div>
 								<div class="kind__el-title">MERCEDES BENZ</div>
 							</div>
-						</div>
-						<div class="kind__el" style="background-image:url('img/item-car-2.jpg')">
+						</a><a class="kind__el" href="#">
+							<div class="kind__el-img" style="background-image:url('img/item-car-2.jpg')"></div>
 							<div class="kind__el-filter"></div>
 							<div class="kind__el-content">
 								<div class="kind__el-sub-title">ремонт двигателей</div>
 								<div class="kind__el-title">BMW</div>
 							</div>
-						</div>
-						<div class="kind__el" style="background-image:url('img/item-car-3.jpg')">
+						</a><a class="kind__el" href="#">
+							<div class="kind__el-img" style="background-image:url('img/item-car-3.jpg')"></div>
 							<div class="kind__el-filter"></div>
 							<div class="kind__el-content">
 								<div class="kind__el-sub-title">ремонт двигателей</div>
 								<div class="kind__el-title">AUDI</div>
 							</div>
-						</div>
-						<div class="kind__el" style="background-image:url('img/item-car-4.jpg')">
+						</a><a class="kind__el" href="#">
+							<div class="kind__el-img" style="background-image:url('img/item-car-4.jpg')"></div>
 							<div class="kind__el-filter"></div>
 							<div class="kind__el-content">
 								<div class="kind__el-sub-title">ремонт двигателей</div>
 								<div class="kind__el-title">FORD</div>
 							</div>
-						</div>
-						<div class="kind__el" style="background-image:url('img/item-car-5.jpg')">
+						</a><a class="kind__el" href="#">
+							<div class="kind__el-img" style="background-image:url('img/item-car-5.jpg')"></div>
 							<div class="kind__el-filter"></div>
 							<div class="kind__el-content">
 								<div class="kind__el-sub-title">ремонт двигателей</div>
 								<div class="kind__el-title">NISSAN</div>
 							</div>
-						</div>
-						<div class="kind__el" style="background-image:url('img/item-car-6.jpg')">
+						</a><a class="kind__el" href="#">
+							<div class="kind__el-img" style="background-image:url('img/item-car-6.jpg')"></div>
 							<div class="kind__el-filter"></div>
 							<div class="kind__el-content">
 								<div class="kind__el-sub-title">ремонт двигателей</div>
 								<div class="kind__el-title">MITSUBISHI</div>
 							</div>
-						</div>
-					</div>
+						</a></div>
 				</div>
 				<!--request-->
 				<div class="request">
@@ -142,8 +141,9 @@
 									<div class="input-row">
 										<input class="input" type="text" placeholder="Пробег" />
 									</div>
-									<div class="input-row">
+									<div class="input-row input-row--error">
 										<input class="input" type="text" placeholder="Телефон" />
+										<div class="input-row-error-text">Заполните поле</div>
 									</div>
 									<div class="form-agreement">
 										<div class="form-agreement__text">
@@ -302,7 +302,7 @@
 										<input class="input" type="text" name="name" placeholder="Ваше имя" />
 									</div>
 									<div class="input-row">
-										<input class="input" type="text" name="phone" placeholder="Ваш телефон" />
+										<input class="input" type="text" name="phone" placeholder="Телефон" />
 									</div>
 									<div class="check-el modal-agree">
 										<label class="style-label style-label--checkbox">
@@ -334,8 +334,8 @@
 										<input class="input" type="text" name="name" placeholder="Ваше имя" />
 									</div>
 									<div class="input-row input-row--half">
-										<input class="input" type="text" name="phone" placeholder="Ваш телефон" />
-										<input class="input" type="text" name="phone" placeholder="Ваша почта" />
+										<input class="input" type="text" name="phone" placeholder="Телефон" />
+										<input class="input" type="text" name="phone" placeholder="Почта" />
 									</div>
 									<div class="input-row">
 										<textarea class="input" name="" cols="30" rows="10"></textarea>

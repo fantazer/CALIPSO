@@ -9,37 +9,42 @@ include block_html/_include.pug
 		//kind-car
 		.main-cont
 			.kind
-				   .kind__el(style="background-image:url('img/item-car-1.jpg')")
+				a(href="#" ).kind__el
+					.kind__el-img(style="background-image:url('img/item-car-1.jpg')")
 					.kind__el-filter
 					.kind__el-content
 						.kind__el-sub-title ремонт двигателей
 						.kind__el-title MERCEDES BENZ
-				.kind__el(style="background-image:url('img/item-car-2.jpg')")
+				a(href="#" ).kind__el
+					.kind__el-img(style="background-image:url('img/item-car-2.jpg')")
 					.kind__el-filter
 					.kind__el-content
 						.kind__el-sub-title ремонт двигателей
 						.kind__el-title BMW
-				.kind__el(style="background-image:url('img/item-car-3.jpg')")
+				a(href="#" ).kind__el
+					.kind__el-img(style="background-image:url('img/item-car-3.jpg')")
 					.kind__el-filter
 					.kind__el-content
 						.kind__el-sub-title ремонт двигателей
 						.kind__el-title AUDI
-				.kind__el(style="background-image:url('img/item-car-4.jpg')")
+				a(href="#" ).kind__el
+					.kind__el-img(style="background-image:url('img/item-car-4.jpg')")
 					.kind__el-filter
 					.kind__el-content
 						.kind__el-sub-title ремонт двигателей
 						.kind__el-title FORD
-				.kind__el(style="background-image:url('img/item-car-5.jpg')")
+				a(href="#" ).kind__el
+					.kind__el-img(style="background-image:url('img/item-car-5.jpg')")
 					.kind__el-filter
 					.kind__el-content
 						.kind__el-sub-title ремонт двигателей
 						.kind__el-title NISSAN
-				.kind__el(style="background-image:url('img/item-car-6.jpg')")
+				a(href="#" ).kind__el
+					.kind__el-img(style="background-image:url('img/item-car-6.jpg')")
 					.kind__el-filter
 					.kind__el-content
 						.kind__el-sub-title ремонт двигателей
 						.kind__el-title MITSUBISHI
-
 
 		//request
 		.request
@@ -56,8 +61,9 @@ include block_html/_include.pug
 								input(type="text" placeholder="Год выпуска" class="input")
 							.input-row
 								input(type="text" placeholder="Пробег" class="input")
-							.input-row
+							.input-row.input-row--error
 								input(type="text" placeholder="Телефон" class="input")
+								.input-row-error-text Заполните поле
 							.form-agreement
 								.form-agreement__text
 									.check-el
@@ -67,6 +73,7 @@ include block_html/_include.pug
 												+icon("checked","icon-check")
 											.sytle-input-text Я согласен с условиями обработки персональных данных
 								input(type="submit" value="отправить" class="form-get")
+
 
 		//content-text
 		.section
